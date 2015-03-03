@@ -13,6 +13,7 @@
 		9985462D1AA6640100E56612 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9985462C1AA6640100E56612 /* Images.xcassets */; };
 		998546301AA6640100E56612 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9985462E1AA6640100E56612 /* LaunchScreen.xib */; };
 		9985463C1AA6640100E56612 /* AlleNeuneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985463B1AA6640100E56612 /* AlleNeuneTests.swift */; };
+		998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546451AA6666500E56612 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		998546351AA6640100E56612 /* AlleNeuneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlleNeuneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9985463A1AA6640100E56612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9985463B1AA6640100E56612 /* AlleNeuneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlleNeuneTests.swift; sourceTree = "<group>"; };
+		998546451AA6666500E56612 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		998546221AA6640100E56612 /* AlleNeune */ = {
 			isa = PBXGroup;
 			children = (
+				998546451AA6666500E56612 /* SwiftyJSON.swift */,
 				998546251AA6640100E56612 /* AppDelegate.swift */,
 				998546271AA6640100E56612 /* ViewController.swift */,
 				998546291AA6640100E56612 /* Main.storyboard */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */,
 				998546281AA6640100E56612 /* ViewController.swift in Sources */,
 				998546261AA6640100E56612 /* AppDelegate.swift in Sources */,
 			);
@@ -405,6 +409,7 @@
 				998546411AA6640100E56612 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		998546421AA6640100E56612 /* Build configuration list for PBXNativeTarget "AlleNeuneTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				998546441AA6640100E56612 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

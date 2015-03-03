@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>ABF132B3-11A0-482D-88E2-233F825EBFCF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AlleNeune</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C8C88F76A95DE81CB3F3A5DA3C005474A7A1763A</key>
+		<string>https://github.com/Deutronomium/-iOS-AlleNeune.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AlleNeune.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C8C88F76A95DE81CB3F3A5DA3C005474A7A1763A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Deutronomium/-iOS-AlleNeune.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C8C88F76A95DE81CB3F3A5DA3C005474A7A1763A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C8C88F76A95DE81CB3F3A5DA3C005474A7A1763A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AlleNeune</string>
+		</dict>
+	</array>
+</dict>
+</plist>
