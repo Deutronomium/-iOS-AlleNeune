@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		992FD1E31AA7C086000CD5A3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992FD1E21AA7C086000CD5A3 /* Session.swift */; };
 		998546261AA6640100E56612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546251AA6640100E56612 /* AppDelegate.swift */; };
 		998546281AA6640100E56612 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546271AA6640100E56612 /* LoginController.swift */; };
 		9985462B1AA6640100E56612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 998546291AA6640100E56612 /* Main.storyboard */; };
@@ -14,6 +15,9 @@
 		998546301AA6640100E56612 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9985462E1AA6640100E56612 /* LaunchScreen.xib */; };
 		9985463C1AA6640100E56612 /* AlleNeuneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985463B1AA6640100E56612 /* AlleNeuneTests.swift */; };
 		998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546451AA6666500E56612 /* SwiftyJSON.swift */; };
+		99C8D55F1AA7008D00D3EF7D /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D55E1AA7008D00D3EF7D /* SessionService.swift */; };
+		99C8D5611AA700A800D3EF7D /* ApiPostHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D5601AA700A800D3EF7D /* ApiPostHandler.swift */; };
+		99C8D5911AA707A900D3EF7D /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D5901AA707A900D3EF7D /* PostResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		992FD1E21AA7C086000CD5A3 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		998546201AA6640100E56612 /* AlleNeune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlleNeune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		998546241AA6640100E56612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		998546251AA6640100E56612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,9 @@
 		9985463A1AA6640100E56612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9985463B1AA6640100E56612 /* AlleNeuneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlleNeuneTests.swift; sourceTree = "<group>"; };
 		998546451AA6666500E56612 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		99C8D55E1AA7008D00D3EF7D /* SessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		99C8D5601AA700A800D3EF7D /* ApiPostHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiPostHandler.swift; sourceTree = "<group>"; };
+		99C8D5901AA707A900D3EF7D /* PostResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		992FD1DD1AA7BF9A000CD5A3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				99C8D55E1AA7008D00D3EF7D /* SessionService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		992FD1DE1AA7BFAF000CD5A3 /* ApiHelper */ = {
+			isa = PBXGroup;
+			children = (
+				99C8D5901AA707A900D3EF7D /* PostResponse.swift */,
+				99C8D5601AA700A800D3EF7D /* ApiPostHandler.swift */,
+			);
+			name = ApiHelper;
+			sourceTree = "<group>";
+		};
+		992FD1DF1AA7BFC4000CD5A3 /* HelperLibs */ = {
+			isa = PBXGroup;
+			children = (
+				998546451AA6666500E56612 /* SwiftyJSON.swift */,
+			);
+			name = HelperLibs;
+			sourceTree = "<group>";
+		};
+		992FD1E01AA7BFE0000CD5A3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				998546271AA6640100E56612 /* LoginController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		992FD1E11AA7C070000CD5A3 /* ApiStructs */ = {
+			isa = PBXGroup;
+			children = (
+				992FD1E21AA7C086000CD5A3 /* Session.swift */,
+			);
+			name = ApiStructs;
+			sourceTree = "<group>";
+		};
 		998546171AA6640100E56612 = {
 			isa = PBXGroup;
 			children = (
@@ -79,9 +128,12 @@
 		998546221AA6640100E56612 /* AlleNeune */ = {
 			isa = PBXGroup;
 			children = (
-				998546451AA6666500E56612 /* SwiftyJSON.swift */,
+				992FD1E11AA7C070000CD5A3 /* ApiStructs */,
+				992FD1E01AA7BFE0000CD5A3 /* ViewController */,
+				992FD1DF1AA7BFC4000CD5A3 /* HelperLibs */,
+				992FD1DE1AA7BFAF000CD5A3 /* ApiHelper */,
+				992FD1DD1AA7BF9A000CD5A3 /* Services */,
 				998546251AA6640100E56612 /* AppDelegate.swift */,
-				998546271AA6640100E56612 /* LoginController.swift */,
 				998546291AA6640100E56612 /* Main.storyboard */,
 				9985462C1AA6640100E56612 /* Images.xcassets */,
 				9985462E1AA6640100E56612 /* LaunchScreen.xib */,
@@ -217,7 +269,11 @@
 			files = (
 				998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */,
 				998546281AA6640100E56612 /* LoginController.swift in Sources */,
+				99C8D5611AA700A800D3EF7D /* ApiPostHandler.swift in Sources */,
+				99C8D55F1AA7008D00D3EF7D /* SessionService.swift in Sources */,
+				99C8D5911AA707A900D3EF7D /* PostResponse.swift in Sources */,
 				998546261AA6640100E56612 /* AppDelegate.swift in Sources */,
+				992FD1E31AA7C086000CD5A3 /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
