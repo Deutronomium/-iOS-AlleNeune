@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="LoginController" customModule="AlleNeune" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="30e-N8-8oh"/>
                         <viewControllerLayoutGuide type="bottom" id="KAH-68-4sb"/>
@@ -15,7 +16,60 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeG-6Y-i0d">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Login" id="QjR-x5-3qD"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rn7-9z-eq0">
+                                <rect key="frame" x="16" y="142" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fmi-dB-9p9">
+                                <rect key="frame" x="16" y="92" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-Kb-bWc">
+                                <rect key="frame" x="281" y="222" width="38" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="34R-oY-ypp"/>
+                                    <constraint firstAttribute="width" constant="38" id="nFP-FR-FbQ"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDU-1n-0TO">
+                                <rect key="frame" x="273" y="282" width="55" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="WoF-Rr-ytZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="quS-Ic-ozZ"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LeG-6Y-i0d" firstAttribute="top" secondItem="30e-N8-8oh" secondAttribute="bottom" constant="8" id="8ze-ky-KRN"/>
+                            <constraint firstItem="uDU-1n-0TO" firstAttribute="top" secondItem="qKg-Kb-bWc" secondAttribute="bottom" constant="30" id="EnN-ec-KC7"/>
+                            <constraint firstItem="Rn7-9z-eq0" firstAttribute="top" secondItem="Fmi-dB-9p9" secondAttribute="bottom" constant="20" id="M9J-KO-Cci"/>
+                            <constraint firstItem="qKg-Kb-bWc" firstAttribute="top" secondItem="Rn7-9z-eq0" secondAttribute="bottom" constant="50" id="OSk-Ir-KJ6"/>
+                            <constraint firstItem="Fmi-dB-9p9" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Ww2-7J-Oag"/>
+                            <constraint firstAttribute="centerX" secondItem="qKg-Kb-bWc" secondAttribute="centerX" id="dhJ-r0-mfL"/>
+                            <constraint firstItem="Rn7-9z-eq0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="eM0-gK-GI5"/>
+                            <constraint firstItem="Rn7-9z-eq0" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="f9C-Cs-Ir4"/>
+                            <constraint firstAttribute="centerX" secondItem="uDU-1n-0TO" secondAttribute="centerX" id="gMB-PY-dYa"/>
+                            <constraint firstItem="Fmi-dB-9p9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="idI-Cu-oBe"/>
+                            <constraint firstItem="Fmi-dB-9p9" firstAttribute="top" secondItem="LeG-6Y-i0d" secondAttribute="bottom" constant="20" id="uZW-hR-f5R"/>
+                            <constraint firstItem="LeG-6Y-i0d" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="zSK-Xf-bbI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LeG-6Y-i0d" secondAttribute="trailing" constant="-16" id="zd8-3C-mWr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
