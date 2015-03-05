@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		549A30F6DA8754A08B88C598 /* Fine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A35F3311CD6F6FECFF4C4 /* Fine.swift */; };
+		549A341D6C6D6FEA54AFBBCF /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A3B8F1082B2855CF6DBFD /* Drink.swift */; };
+		549A38966F44FF8A21E38BE1 /* DrinkPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A3AF8F105B5CC9E4CCD39 /* DrinkPayment.swift */; };
+		549A3A0266ECEE31302FBF80 /* FinePayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A307D97DAEACE01BF4CDD /* FinePayment.swift */; };
+		549A3A4833195ED9C735B733 /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A3FD1E297F9127D8F6819 /* Club.swift */; };
+		549A3C316575B9A2851D4C9B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A3816AEADFE9D9B62F2B4 /* User.swift */; };
+		549A3CCD4B2692F9B32DFC15 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A36D2ABD5CABFA77DB7C1 /* Event.swift */; };
 		992FD1E31AA7C086000CD5A3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992FD1E21AA7C086000CD5A3 /* Session.swift */; };
 		998546261AA6640100E56612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546251AA6640100E56612 /* AppDelegate.swift */; };
 		998546281AA6640100E56612 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546271AA6640100E56612 /* LoginController.swift */; };
@@ -31,6 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		549A307D97DAEACE01BF4CDD /* FinePayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinePayment.swift; sourceTree = "<group>"; };
+		549A35F3311CD6F6FECFF4C4 /* Fine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fine.swift; sourceTree = "<group>"; };
+		549A36D2ABD5CABFA77DB7C1 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		549A3816AEADFE9D9B62F2B4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		549A3AF8F105B5CC9E4CCD39 /* DrinkPayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkPayment.swift; sourceTree = "<group>"; };
+		549A3B8F1082B2855CF6DBFD /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		549A3FD1E297F9127D8F6819 /* Club.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
 		992FD1E21AA7C086000CD5A3 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		998546201AA6640100E56612 /* AlleNeune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlleNeune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		998546241AA6640100E56612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +117,13 @@
 			isa = PBXGroup;
 			children = (
 				992FD1E21AA7C086000CD5A3 /* Session.swift */,
+				549A3FD1E297F9127D8F6819 /* Club.swift */,
+				549A3B8F1082B2855CF6DBFD /* Drink.swift */,
+				549A3AF8F105B5CC9E4CCD39 /* DrinkPayment.swift */,
+				549A36D2ABD5CABFA77DB7C1 /* Event.swift */,
+				549A307D97DAEACE01BF4CDD /* FinePayment.swift */,
+				549A3816AEADFE9D9B62F2B4 /* User.swift */,
+				549A35F3311CD6F6FECFF4C4 /* Fine.swift */,
 			);
 			name = ApiStructs;
 			sourceTree = "<group>";
@@ -274,6 +295,13 @@
 				99C8D5911AA707A900D3EF7D /* PostResponse.swift in Sources */,
 				998546261AA6640100E56612 /* AppDelegate.swift in Sources */,
 				992FD1E31AA7C086000CD5A3 /* Session.swift in Sources */,
+				549A3A4833195ED9C735B733 /* Club.swift in Sources */,
+				549A341D6C6D6FEA54AFBBCF /* Drink.swift in Sources */,
+				549A38966F44FF8A21E38BE1 /* DrinkPayment.swift in Sources */,
+				549A3CCD4B2692F9B32DFC15 /* Event.swift in Sources */,
+				549A3A0266ECEE31302FBF80 /* FinePayment.swift in Sources */,
+				549A3C316575B9A2851D4C9B /* User.swift in Sources */,
+				549A30F6DA8754A08B88C598 /* Fine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

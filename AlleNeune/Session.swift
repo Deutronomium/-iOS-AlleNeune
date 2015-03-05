@@ -9,9 +9,11 @@
 import Foundation
 
 struct Session {
-    var ROOT : String = "session"
-    var EMAIL : String = "email"
-    var PASSWORD : String = "password"
-    
-    var GENERIC_URL : String = "/sessions"
+    //api string parameters
+    let ROOT : String = "session"
+    let EMAIL : String = "email"
+    let PASSWORD : String = "password"
+
+    //URLs
+    let GENERIC_URL : String = "/sessions"
 }
