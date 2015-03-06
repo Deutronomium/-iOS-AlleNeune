@@ -27,6 +27,8 @@
 		998546301AA6640100E56612 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9985462E1AA6640100E56612 /* LaunchScreen.xib */; };
 		9985463C1AA6640100E56612 /* AlleNeuneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985463B1AA6640100E56612 /* AlleNeuneTests.swift */; };
 		998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546451AA6666500E56612 /* SwiftyJSON.swift */; };
+		99C3CDE21AA9B95D00941CD4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE11AA9B95D00941CD4 /* Utils.swift */; };
+		99C3CDE41AA9C2BA00941CD4 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE31AA9C2BA00941CD4 /* UIHelper.swift */; };
 		99C8D55F1AA7008D00D3EF7D /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D55E1AA7008D00D3EF7D /* SessionService.swift */; };
 		99C8D5611AA700A800D3EF7D /* ApiPostHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D5601AA700A800D3EF7D /* ApiPostHandler.swift */; };
 		99C8D5911AA707A900D3EF7D /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D5901AA707A900D3EF7D /* PostResponse.swift */; };
@@ -67,6 +69,8 @@
 		9985463A1AA6640100E56612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9985463B1AA6640100E56612 /* AlleNeuneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlleNeuneTests.swift; sourceTree = "<group>"; };
 		998546451AA6666500E56612 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		99C3CDE11AA9B95D00941CD4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		99C3CDE31AA9C2BA00941CD4 /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		99C8D55E1AA7008D00D3EF7D /* SessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		99C8D5601AA700A800D3EF7D /* ApiPostHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiPostHandler.swift; sourceTree = "<group>"; };
 		99C8D5901AA707A900D3EF7D /* PostResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
@@ -116,12 +120,14 @@
 			name = ApiHelper;
 			sourceTree = "<group>";
 		};
-		992FD1DF1AA7BFC4000CD5A3 /* HelperLibs */ = {
+		992FD1DF1AA7BFC4000CD5A3 /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
 				998546451AA6666500E56612 /* SwiftyJSON.swift */,
+				99C3CDE11AA9B95D00941CD4 /* Utils.swift */,
+				99C3CDE31AA9C2BA00941CD4 /* UIHelper.swift */,
 			);
-			name = HelperLibs;
+			name = HelperClasses;
 			sourceTree = "<group>";
 		};
 		992FD1E01AA7BFE0000CD5A3 /* ViewController */ = {
@@ -182,7 +188,7 @@
 				997EF32D1AA9ADA3006A7461 /* Layouts */,
 				992FD1E11AA7C070000CD5A3 /* ApiStructs */,
 				992FD1E01AA7BFE0000CD5A3 /* ViewController */,
-				992FD1DF1AA7BFC4000CD5A3 /* HelperLibs */,
+				992FD1DF1AA7BFC4000CD5A3 /* HelperClasses */,
 				992FD1DE1AA7BFAF000CD5A3 /* ApiHelper */,
 				992FD1DD1AA7BF9A000CD5A3 /* Services */,
 				998546251AA6640100E56612 /* AppDelegate.swift */,
@@ -323,6 +329,7 @@
 				992FD1E51AA99644000CD5A3 /* UserHomeController.swift in Sources */,
 				998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */,
 				998546281AA6640100E56612 /* LoginController.swift in Sources */,
+				99C3CDE41AA9C2BA00941CD4 /* UIHelper.swift in Sources */,
 				99C8D5611AA700A800D3EF7D /* ApiPostHandler.swift in Sources */,
 				99C8D55F1AA7008D00D3EF7D /* SessionService.swift in Sources */,
 				99C8D5911AA707A900D3EF7D /* PostResponse.swift in Sources */,
@@ -337,6 +344,7 @@
 				549A3C316575B9A2851D4C9B /* User.swift in Sources */,
 				549A30F6DA8754A08B88C598 /* Fine.swift in Sources */,
 				549A3016417E6D3852B6ABEA /* UserService.swift in Sources */,
+				99C3CDE21AA9B95D00941CD4 /* Utils.swift in Sources */,
 				549A384E3B8DF793B73C791F /* UserValidity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

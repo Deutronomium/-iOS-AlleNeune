@@ -14,12 +14,7 @@ class SessionService {
         var semaphore = dispatch_semaphore_create(0)
         let apiPostHandler = ApiPostHandler()
         
-        var params = [
-            Session.ROOT: [
-                Session.EMAIL : email,
-                Session.PASSWORD : password
-            ]
-        ]
+        var params = [Session.ROOT: [Session.EMAIL : email, Session.PASSWORD : password]]
         var url = apiPostHandler.HOST + Session.GENERIC_URL
         var success = false;
         apiPostHandler.apiPost(params, url: url) { (succeeded, postResponse) -> () in

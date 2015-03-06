@@ -8,10 +8,11 @@ import Foundation
 class UserService {
 
     func checkValidity(userName: String, email: String, password: String, passwordConfirmation: String, phoneNumber: String) -> UserValidity {
+        var semaphore = dispatch_semaphore_create(0)
         
         let apiPostHandler = ApiPostHandler()
         var params : NSDictionary
-        let url = ""
+        let url = User.VALIDITY
         var validity : UserValidity?
 
         if phoneNumber.isEmpty {
@@ -49,9 +50,13 @@ class UserService {
                         validity = UserValidity.EMAIL_USED
                     }
                 }
+            } else {
+                println("not succeeded")
             }
+            dispatch_semaphore_signal(semaphore)
         }
         
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         return validity!
     }
 

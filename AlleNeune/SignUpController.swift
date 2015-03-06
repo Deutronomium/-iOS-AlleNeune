@@ -15,25 +15,33 @@ class SignUpController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
 
     @IBAction func continueAction(sender: AnyObject) {
+        UIHelper.resetBorder(userNameTextField, emailTextField, passwordTextField, confirmPasswordTextField)
+        
         let userService = UserService()
         
         let userName = userNameTextField.text
         let email = emailTextField.text
         let password = passwordTextField.text
         let confirmPassword = confirmPasswordTextField.text
-        let userValidity = userService.checkValidity(userName, email: email, password: password, passwordConfirmation: confirmPassword, phoneNumber: "")
-        switch userValidity {
+        
+        if password == confirmPassword {
+            let userValidity = userService.checkValidity(userName, email: email, password: password, passwordConfirmation: confirmPassword, phoneNumber: "")
+            switch userValidity {
             case .VALID :
-                println("Valid")
+                //TODO: Move to phoneNumberView
+                println("valid")
             case .NAME_AND_EMAIL_USED:
-                println("user and email")
+                UIHelper.changeTextFieldColor(userNameTextField, placeholderText: "Username already in use!")
+                UIHelper.changeTextFieldColor(emailTextField, placeholderText: "Email already in use!")
             case .NAME_USED:
-                println("user")
+                UIHelper.changeTextFieldColor(userNameTextField, placeholderText: "Username already in use!")
             case .EMAIL_USED:
-                println("email")
+                UIHelper.changeTextFieldColor(emailTextField, placeholderText: "Email already in use!")
+            }
+        } else {
+            UIHelper.changeTextFieldColor(passwordTextField, placeholderText: "Passwords do not match!")
+            UIHelper.changeTextFieldColor(confirmPasswordTextField, placeholderText: "Passwords do not match!")
         }
-        
-        
     }
     
     @IBAction func backAction(sender: AnyObject) {
@@ -50,16 +58,4 @@ class SignUpController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

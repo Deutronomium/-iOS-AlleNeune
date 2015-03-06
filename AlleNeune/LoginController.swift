@@ -31,7 +31,6 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(User.ROOT)
         navigationController?.navigationBarHidden = false
         // Do any additional setup after loading the view, typically from a nib.
     }

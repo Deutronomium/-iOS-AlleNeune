@@ -11,12 +11,15 @@ import Foundation
 class ApiPostHandler {
     let HOST = "http://localhost:3000"
     
-    func apiPost(params : NSDictionary, url : String, postCompleted : (succeeded: Bool, postResponse: PostResponse) ->()) {
+    func apiPost(params : NSDictionary, url : String, postCompleted : (succeeded:
+        Bool, postResponse: PostResponse) ->()) {
+        var url = HOST + url
         var request = NSMutableURLRequest(URL: NSURL(string: url)!)
         var session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
         
         var err: NSError?
+        
         
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -32,6 +35,5 @@ class ApiPostHandler {
         })
         
         task.resume()
-
     }
 }
