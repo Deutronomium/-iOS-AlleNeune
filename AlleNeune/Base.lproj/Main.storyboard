@@ -42,20 +42,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Eb-U4-R6b">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Login" id="scb-Un-FVn"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6Eb-U4-R6b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="1EI-ay-O0n"/>
                             <constraint firstAttribute="centerX" secondItem="Fmi-dB-9p9" secondAttribute="centerX" id="1c4-Cf-07t"/>
                             <constraint firstItem="uDU-1n-0TO" firstAttribute="top" secondItem="qKg-Kb-bWc" secondAttribute="bottom" constant="30" id="5B3-js-2HZ"/>
                             <constraint firstItem="Rn7-9z-eq0" firstAttribute="top" secondItem="Fmi-dB-9p9" secondAttribute="bottom" constant="20" id="7CZ-7b-TyA"/>
                             <constraint firstItem="Fmi-dB-9p9" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="8rU-LQ-BD2"/>
                             <constraint firstItem="Rn7-9z-eq0" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="9vg-N6-JKk"/>
-                            <constraint firstItem="Fmi-dB-9p9" firstAttribute="top" secondItem="30e-N8-8oh" secondAttribute="bottom" constant="26" id="DzU-gM-b7m"/>
+                            <constraint firstItem="Fmi-dB-9p9" firstAttribute="top" secondItem="30e-N8-8oh" secondAttribute="bottom" constant="70" id="DzU-gM-b7m"/>
+                            <constraint firstAttribute="centerX" secondItem="6Eb-U4-R6b" secondAttribute="centerX" id="KW9-yI-KnC"/>
                             <constraint firstItem="Rn7-9z-eq0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Q72-1E-Te3"/>
                             <constraint firstAttribute="centerX" secondItem="Rn7-9z-eq0" secondAttribute="centerX" id="Qy9-AR-Uue"/>
+                            <constraint firstItem="6Eb-U4-R6b" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Ruq-FJ-Hv4"/>
                             <constraint firstAttribute="centerX" secondItem="uDU-1n-0TO" secondAttribute="centerX" id="bwd-lK-Mgw"/>
                             <constraint firstAttribute="centerX" secondItem="Fmi-dB-9p9" secondAttribute="centerX" id="h39-hu-h95"/>
-                            <constraint firstItem="Fmi-dB-9p9" firstAttribute="top" secondItem="30e-N8-8oh" secondAttribute="bottom" constant="26" id="psl-gc-fDu"/>
+                            <constraint firstItem="Fmi-dB-9p9" firstAttribute="top" secondItem="30e-N8-8oh" secondAttribute="bottom" constant="70" id="psl-gc-fDu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Eb-U4-R6b" secondAttribute="trailing" constant="-16" id="rBn-Gc-4q6"/>
                             <constraint firstAttribute="centerX" secondItem="qKg-Kb-bWc" secondAttribute="centerX" id="reW-oL-4cu"/>
                             <constraint firstItem="qKg-Kb-bWc" firstAttribute="top" secondItem="Rn7-9z-eq0" secondAttribute="bottom" constant="50" id="xGg-Zl-SeZ"/>
                             <constraint firstItem="Fmi-dB-9p9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="zMk-dF-L5p"/>

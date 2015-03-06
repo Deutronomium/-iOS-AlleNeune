@@ -15,6 +15,6 @@ struct Drink {
 
     //URLs
     let GENERIC_URL : String = "/drinks"
-    let GET_BY_CLUB = GENERIC_URL + "/get_by_club"
-    let UPDATE = GENERIC_URL + "/"
+    let GET_BY_CLUB : String = Drink().GENERIC_URL + "/get_by_club"
+    let UPDATE : String = Drink().GENERIC_URL + "/"
 }

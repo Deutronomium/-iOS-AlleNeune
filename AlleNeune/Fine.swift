@@ -15,6 +15,6 @@ struct Fine {
 
     //URLs
     let GENERIC_URL = "/fines"
-    let GET_BY_CLUB = GENERIC_URL + "/get_by_club"
-    let UPDATE = GENERIC_URL + "/"
+    let GET_BY_CLUB : String = Fine().GENERIC_URL + "/get_by_club"
+    let UPDATE : String = Fine().GENERIC_URL + "/"
 }

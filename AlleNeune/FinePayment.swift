@@ -16,5 +16,5 @@ struct FinePayment {
 
     //URLs
     let GENERIC_URL = "/fine_payments"
-    let GET_BY_USER_AND_EVENT = GENERIC_URL + "get_by_user_and_event"
+    let GET_BY_USER_AND_EVENT : String = FinePayment().GENERIC_URL + "get_by_user_and_event"
 }

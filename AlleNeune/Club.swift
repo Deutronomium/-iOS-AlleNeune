@@ -14,7 +14,7 @@ struct Club {
 
     //URLs
     let GENERIC_URL : String = "/clubs"
-    let VALIDITY : String = GENERIC_URL + "/validity"
-    let GET_MEMBERS_BY_CLUB : String = GENERIC_URL + "/get_members_by_club"
-    let ADD_MEMBERS : String = GENERIC_URL + "/add_members"
+    let VALIDITY : String = Club().GENERIC_URL + "/validity"
+    let GET_MEMBERS_BY_CLUB : String = Club().GENERIC_URL + "get_members_by_club"
+    let ADD_MEMBERS : String = Club().GENERIC_URL + "/add_members"
 }

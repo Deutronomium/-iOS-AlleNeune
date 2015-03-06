@@ -21,6 +21,6 @@ struct User {
 
     //URLs
     let GENERIC_URL = "/users"
-    let VALIDITY = GENERIC_URL + "/validity"
-    let GET_USER_BY_CLUB_NAME = GENERIC_URL + "/user_club";
+    let VALIDITY : String = User().GENERIC_URL + "/validity"
+    let GET_USER_BY_CLUB_NAME :String = User().GENERIC_URL + "/user_club";
 }

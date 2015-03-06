@@ -15,6 +15,6 @@ struct Event {
     let EVENT_ID = "event_id"
 
     let GENERIC_URL = "/events"
-    let GET_PARTICIPANTS = GENERIC_URL + "/get_participants"
-    let GET_BY_CLUB = GENERIC_URL + "/get_by_club"
+    let GET_PARTICIPANTS : String = Event().GENERIC_URL + "/get_participants"
+    let GET_BY_CLUB : String = Event().GENERIC_URL + "/get_by_club"
 }
