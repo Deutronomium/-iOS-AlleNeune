@@ -7,20 +7,20 @@ import Foundation
 
 struct User {
     //api parameters
-    let ROOT = "user"
-    let ID = "id"
-    let USER_NAME = "user_name"
-    let FIRST_NAME = "first_name"
-    let LAST_NAME = "last_name"
-    let PHONE_NUMBER = "phone_number"
-    let EMAIL = "email"
-    let STREET = "street"
-    let CITY = "city"
-    let PASSWORD = "password"
-    let PASSWORD_CONFIRMATION = "password_confirmation"
+    static let ROOT : String = "user"
+    static let ID = "id"
+    static let USER_NAME = "user_name"
+    static let FIRST_NAME = "first_name"
+    static let LAST_NAME = "last_name"
+    static let PHONE_NUMBER = "phone_number"
+    static let EMAIL = "email"
+    static let STREET = "street"
+    static let CITY = "city"
+    static let PASSWORD = "password"
+    static let PASSWORD_CONFIRMATION = "password_confirmation"
 
     //URLs
-    let GENERIC_URL = "/users"
-    let VALIDITY : String = User().GENERIC_URL + "/validity"
-    let GET_USER_BY_CLUB_NAME :String = User().GENERIC_URL + "/user_club";
+    static let GENERIC_URL = "/users"
+    static let VALIDITY : String = User.GENERIC_URL + "/validity"
+    static let GET_USER_BY_CLUB_NAME :String = User.GENERIC_URL + "/user_club";
 }

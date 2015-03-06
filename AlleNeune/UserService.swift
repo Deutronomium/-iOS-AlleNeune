@@ -8,7 +8,7 @@ import Foundation
 class UserService {
 
     func checkValidity(userName: String, email: String, password: String, passwordConfirmation: String, phoneNumber: String) -> UserValidity {
-        let user = User()
+        
         let apiPostHandler = ApiPostHandler()
         var params : NSDictionary
         let url = ""
@@ -16,21 +16,21 @@ class UserService {
 
         if phoneNumber.isEmpty {
             params = [
-                    user.ROOT: [
-                            user.USER_NAME: userName,
-                            user.EMAIL: email,
-                            user.PASSWORD: password,
-                            user.PASSWORD_CONFIRMATION: passwordConfirmation
+                    User.ROOT: [
+                            User.USER_NAME: userName,
+                            User.EMAIL: email,
+                            User.PASSWORD: password,
+                            User.PASSWORD_CONFIRMATION: passwordConfirmation
                     ]
             ]
         } else {
             params = [
-                    user.ROOT: [
-                            user.USER_NAME: userName,
-                            user.EMAIL: email,
-                            user.PASSWORD: password,
-                            user.PASSWORD_CONFIRMATION: passwordConfirmation,
-                            user.PHONE_NUMBER: phoneNumber
+                    User.ROOT: [
+                            User.USER_NAME: userName,
+                            User.EMAIL: email,
+                            User.PASSWORD: password,
+                            User.PASSWORD_CONFIRMATION: passwordConfirmation,
+                            User.PHONE_NUMBER: phoneNumber
                     ]
             ]
         }
