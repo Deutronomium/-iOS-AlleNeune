@@ -7,14 +7,14 @@ import Foundation
 
 struct Event {
     //api parameters
-    let ROOT = "event"
-    let ID = "id"
-    let NAME = "name"
-    let CLUB_ID = "club_id"
-    let DATE = "date"
-    let EVENT_ID = "event_id"
+    static let ROOT = "event"
+    static let ID = "id"
+    static let NAME = "name"
+    static let CLUB_ID = "club_id"
+    static let DATE = "date"
+    static let EVENT_ID = "event_id"
 
-    let GENERIC_URL = "/events"
-    let GET_PARTICIPANTS : String = Event().GENERIC_URL + "/get_participants"
-    let GET_BY_CLUB : String = Event().GENERIC_URL + "/get_by_club"
+    static let GENERIC_URL = "/events"
+    static let GET_PARTICIPANTS : String = Event.GENERIC_URL + "/get_participants"
+    static let GET_BY_CLUB : String = Event.GENERIC_URL + "/get_by_club"
 }

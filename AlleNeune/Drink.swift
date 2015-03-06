@@ -7,14 +7,14 @@ import Foundation
 
 struct Drink {
     //api parameters
-    let ROOT : String = "drink"
-    let ID : String = "id"
-    let CLUB_ID : String = "club_id"
-    let NAME : String = "name"
-    let PRICE : String = "price"
+    static let ROOT : String = "drink"
+    static let ID : String = "id"
+    static let CLUB_ID : String = "club_id"
+    static let NAME : String = "name"
+    static let PRICE : String = "price"
 
     //URLs
-    let GENERIC_URL : String = "/drinks"
-    let GET_BY_CLUB : String = Drink().GENERIC_URL + "/get_by_club"
-    let UPDATE : String = Drink().GENERIC_URL + "/"
+    static let GENERIC_URL : String = "/drinks"
+    static let GET_BY_CLUB : String = Drink.GENERIC_URL + "/get_by_club"
+    static let UPDATE : String = Drink.GENERIC_URL + "/"
 }

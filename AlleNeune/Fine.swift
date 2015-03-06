@@ -7,14 +7,14 @@ import Foundation
 
 struct Fine {
     //api parameters
-    let ROOT = "fine"
-    let ID = "id"
-    let NAME = "name"
-    let AMOUNT = "amount"
-    let CLUB_ID = "club_id"
+    static let ROOT = "fine"
+    static let ID = "id"
+    static let NAME = "name"
+    static let AMOUNT = "amount"
+    static let CLUB_ID = "club_id"
 
     //URLs
-    let GENERIC_URL = "/fines"
-    let GET_BY_CLUB : String = Fine().GENERIC_URL + "/get_by_club"
-    let UPDATE : String = Fine().GENERIC_URL + "/"
+    static let GENERIC_URL = "/fines"
+    static let GET_BY_CLUB : String = Fine.GENERIC_URL + "/get_by_club"
+    static let UPDATE : String = Fine.GENERIC_URL + "/"
 }

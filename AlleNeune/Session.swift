@@ -10,10 +10,10 @@ import Foundation
 
 struct Session {
     //api string parameters
-    let ROOT : String = "session"
-    let EMAIL : String = "email"
-    let PASSWORD : String = "password"
+    static let ROOT : String = "session"
+    static let EMAIL : String = "email"
+    static let PASSWORD : String = "password"
 
     //URLs
-    let GENERIC_URL : String = "/sessions"
+    static let GENERIC_URL : String = "/sessions"
 }

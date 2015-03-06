@@ -7,14 +7,14 @@ import Foundation
 
 struct Club {
     //api string parameters
-    let ROOT : String = "club"
-    let NAME : String = "name"
-    let ID : String = "id"
-    let MEMBERS : String = "members"
+    static let ROOT : String = "club"
+    static let NAME : String = "name"
+    static let ID : String = "id"
+    static let MEMBERS : String = "members"
 
     //URLs
-    let GENERIC_URL : String = "/clubs"
-    let VALIDITY : String = Club().GENERIC_URL + "/validity"
-    let GET_MEMBERS_BY_CLUB : String = Club().GENERIC_URL + "get_members_by_club"
-    let ADD_MEMBERS : String = Club().GENERIC_URL + "/add_members"
+    static let GENERIC_URL : String = "/clubs"
+    static let VALIDITY : String = Club.GENERIC_URL + "/validity"
+    static let GET_MEMBERS_BY_CLUB : String = Club.GENERIC_URL + "get_members_by_club"
+    static let ADD_MEMBERS : String = Club.GENERIC_URL + "/add_members"
 }
