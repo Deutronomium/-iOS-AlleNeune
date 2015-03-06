@@ -1,5 +1,5 @@
 //
-//  UserHomeController.swift
+//  ClubHomeController.swift
 //  AlleNeune
 //
 //  Created by Patrick Engelkes on 06/03/15.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class UserHomeController: UIViewController {
+class ClubHomeController: UIViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         navigationController?.navigationBarHidden = true
+        super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +25,7 @@ class UserHomeController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         navigationController?.navigationBarHidden = true
     }
+    
 
     /*
     // MARK: - Navigation

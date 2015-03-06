@@ -10,6 +10,7 @@ import Foundation
 
 class ApiPostHandler {
     let HOST = "http://localhost:3000"
+    var semaphore = dispatch_semaphore_create(0)
     
     func apiPost(params : NSDictionary, url : String, postCompleted : (succeeded:
         Bool, postResponse: PostResponse) ->()) {
@@ -32,8 +33,11 @@ class ApiPostHandler {
             } else {
                 postCompleted(succeeded: false, postResponse: postResponse)
             }
+            dispatch_semaphore_signal(self.semaphore)
         })
         
+        
         task.resume()
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
     }
 }

@@ -17,7 +17,6 @@
 		549A3C316575B9A2851D4C9B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A3816AEADFE9D9B62F2B4 /* User.swift */; };
 		549A3CCD4B2692F9B32DFC15 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A36D2ABD5CABFA77DB7C1 /* Event.swift */; };
 		992FD1E31AA7C086000CD5A3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992FD1E21AA7C086000CD5A3 /* Session.swift */; };
-		992FD1E51AA99644000CD5A3 /* UserHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992FD1E41AA99644000CD5A3 /* UserHomeController.swift */; };
 		992FD21C1AA9A956000CD5A3 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992FD21A1AA9A956000CD5A3 /* SignUpController.swift */; };
 		992FD21D1AA9A956000CD5A3 /* SignUpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 992FD21B1AA9A956000CD5A3 /* SignUpController.xib */; };
 		998546261AA6640100E56612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546251AA6640100E56612 /* AppDelegate.swift */; };
@@ -27,8 +26,13 @@
 		998546301AA6640100E56612 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9985462E1AA6640100E56612 /* LaunchScreen.xib */; };
 		9985463C1AA6640100E56612 /* AlleNeuneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985463B1AA6640100E56612 /* AlleNeuneTests.swift */; };
 		998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546451AA6666500E56612 /* SwiftyJSON.swift */; };
+		9985688E1AA9FFCE002905F2 /* SessionLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985688D1AA9FFCE002905F2 /* SessionLogin.swift */; };
 		99C3CDE21AA9B95D00941CD4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE11AA9B95D00941CD4 /* Utils.swift */; };
 		99C3CDE41AA9C2BA00941CD4 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE31AA9C2BA00941CD4 /* UIHelper.swift */; };
+		99C3CDE71AA9C89400941CD4 /* UserHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE51AA9C89400941CD4 /* UserHomeController.swift */; };
+		99C3CDE81AA9C89400941CD4 /* UserHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99C3CDE61AA9C89400941CD4 /* UserHomeController.xib */; };
+		99C3CDEB1AA9C8E800941CD4 /* ClubHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE91AA9C8E800941CD4 /* ClubHomeController.swift */; };
+		99C3CDEC1AA9C8E800941CD4 /* ClubHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99C3CDEA1AA9C8E800941CD4 /* ClubHomeController.xib */; };
 		99C8D55F1AA7008D00D3EF7D /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D55E1AA7008D00D3EF7D /* SessionService.swift */; };
 		99C8D5611AA700A800D3EF7D /* ApiPostHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D5601AA700A800D3EF7D /* ApiPostHandler.swift */; };
 		99C8D5911AA707A900D3EF7D /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D5901AA707A900D3EF7D /* PostResponse.swift */; };
@@ -55,7 +59,6 @@
 		549A3B8F1082B2855CF6DBFD /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		549A3FD1E297F9127D8F6819 /* Club.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
 		992FD1E21AA7C086000CD5A3 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		992FD1E41AA99644000CD5A3 /* UserHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeController.swift; sourceTree = "<group>"; };
 		992FD21A1AA9A956000CD5A3 /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		992FD21B1AA9A956000CD5A3 /* SignUpController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpController.xib; sourceTree = "<group>"; };
 		998546201AA6640100E56612 /* AlleNeune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlleNeune.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,8 +72,13 @@
 		9985463A1AA6640100E56612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9985463B1AA6640100E56612 /* AlleNeuneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlleNeuneTests.swift; sourceTree = "<group>"; };
 		998546451AA6666500E56612 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		9985688D1AA9FFCE002905F2 /* SessionLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionLogin.swift; sourceTree = "<group>"; };
 		99C3CDE11AA9B95D00941CD4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		99C3CDE31AA9C2BA00941CD4 /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		99C3CDE51AA9C89400941CD4 /* UserHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeController.swift; sourceTree = "<group>"; };
+		99C3CDE61AA9C89400941CD4 /* UserHomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserHomeController.xib; sourceTree = "<group>"; };
+		99C3CDE91AA9C8E800941CD4 /* ClubHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClubHomeController.swift; path = ../ClubHomeController.swift; sourceTree = "<group>"; };
+		99C3CDEA1AA9C8E800941CD4 /* ClubHomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ClubHomeController.xib; path = ../ClubHomeController.xib; sourceTree = "<group>"; };
 		99C8D55E1AA7008D00D3EF7D /* SessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		99C8D5601AA700A800D3EF7D /* ApiPostHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiPostHandler.swift; sourceTree = "<group>"; };
 		99C8D5901AA707A900D3EF7D /* PostResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
@@ -98,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				549A33BB07090953C2F26E9F /* UserValidity.swift */,
+				9985688D1AA9FFCE002905F2 /* SessionLogin.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -133,9 +142,10 @@
 		992FD1E01AA7BFE0000CD5A3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				99C3CDE91AA9C8E800941CD4 /* ClubHomeController.swift */,
+				99C3CDE51AA9C89400941CD4 /* UserHomeController.swift */,
 				998546271AA6640100E56612 /* LoginController.swift */,
 				992FD21A1AA9A956000CD5A3 /* SignUpController.swift */,
-				992FD1E41AA99644000CD5A3 /* UserHomeController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -158,6 +168,8 @@
 		997EF32D1AA9ADA3006A7461 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				99C3CDEA1AA9C8E800941CD4 /* ClubHomeController.xib */,
+				99C3CDE61AA9C89400941CD4 /* UserHomeController.xib */,
 				998546291AA6640100E56612 /* Main.storyboard */,
 				992FD21B1AA9A956000CD5A3 /* SignUpController.xib */,
 			);
@@ -185,17 +197,17 @@
 		998546221AA6640100E56612 /* AlleNeune */ = {
 			isa = PBXGroup;
 			children = (
+				992FD1DD1AA7BF9A000CD5A3 /* Services */,
 				997EF32D1AA9ADA3006A7461 /* Layouts */,
 				992FD1E11AA7C070000CD5A3 /* ApiStructs */,
 				992FD1E01AA7BFE0000CD5A3 /* ViewController */,
 				992FD1DF1AA7BFC4000CD5A3 /* HelperClasses */,
 				992FD1DE1AA7BFAF000CD5A3 /* ApiHelper */,
-				992FD1DD1AA7BF9A000CD5A3 /* Services */,
 				998546251AA6640100E56612 /* AppDelegate.swift */,
+				549A3752D624D33D4B4CF667 /* Enums */,
 				9985462C1AA6640100E56612 /* Images.xcassets */,
 				9985462E1AA6640100E56612 /* LaunchScreen.xib */,
 				998546231AA6640100E56612 /* Supporting Files */,
-				549A3752D624D33D4B4CF667 /* Enums */,
 			);
 			path = AlleNeune;
 			sourceTree = "<group>";
@@ -305,7 +317,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99C3CDE81AA9C89400941CD4 /* UserHomeController.xib in Resources */,
 				9985462B1AA6640100E56612 /* Main.storyboard in Resources */,
+				99C3CDEC1AA9C8E800941CD4 /* ClubHomeController.xib in Resources */,
 				998546301AA6640100E56612 /* LaunchScreen.xib in Resources */,
 				9985462D1AA6640100E56612 /* Images.xcassets in Resources */,
 				992FD21D1AA9A956000CD5A3 /* SignUpController.xib in Resources */,
@@ -326,10 +340,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				992FD1E51AA99644000CD5A3 /* UserHomeController.swift in Sources */,
+				99C3CDEB1AA9C8E800941CD4 /* ClubHomeController.swift in Sources */,
 				998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */,
 				998546281AA6640100E56612 /* LoginController.swift in Sources */,
 				99C3CDE41AA9C2BA00941CD4 /* UIHelper.swift in Sources */,
+				9985688E1AA9FFCE002905F2 /* SessionLogin.swift in Sources */,
 				99C8D5611AA700A800D3EF7D /* ApiPostHandler.swift in Sources */,
 				99C8D55F1AA7008D00D3EF7D /* SessionService.swift in Sources */,
 				99C8D5911AA707A900D3EF7D /* PostResponse.swift in Sources */,
@@ -338,6 +353,7 @@
 				549A3A4833195ED9C735B733 /* Club.swift in Sources */,
 				549A341D6C6D6FEA54AFBBCF /* Drink.swift in Sources */,
 				549A38966F44FF8A21E38BE1 /* DrinkPayment.swift in Sources */,
+				99C3CDE71AA9C89400941CD4 /* UserHomeController.swift in Sources */,
 				992FD21C1AA9A956000CD5A3 /* SignUpController.swift in Sources */,
 				549A3CCD4B2692F9B32DFC15 /* Event.swift in Sources */,
 				549A3A0266ECEE31302FBF80 /* FinePayment.swift in Sources */,

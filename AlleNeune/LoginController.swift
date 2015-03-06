@@ -11,16 +11,46 @@ import UIKit
 class LoginController: UIViewController {
     
     var response = false;
+    let userService = UserService()
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func logInAction(sender: AnyObject) {
+        UIHelper.resetBorder(emailTextField, passwordTextField)
         let sessionService = SessionService()
         let email = emailTextField.text
         let password = passwordTextField.text
-        if sessionService.logIn(email, password: password) {
-            let userHomeViewController : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("UserHomeController")
-            self.showViewController(userHomeViewController as UIViewController, sender: userHomeViewController)
+        let logInResponse = sessionService.logIn(email, password: password)
+        if email.isEmpty {
+            UIHelper.changeTextFieldColor(emailTextField, placeholderText: "You did not enter an email address!")
+        }
+        if password.isEmpty {
+            UIHelper.changeTextFieldColor(passwordTextField, placeholderText: "You did not enter a password!")
+        }
+        
+        if !email.isEmpty && !password.isEmpty {
+            switch logInResponse {
+            case .SUCCESS:
+                if userService.userHasClub(currentUser!.userName!) {
+                    let clubHomeViewController = ClubHomeController(nibName: "ClubHomeController", bundle: nil)
+                    navigationController?.pushViewController(clubHomeViewController, animated: true)
+                } else {
+                    let userHomeViewController = UserHomeController(nibName: "UserHomeController", bundle: nil)
+                    navigationController?.pushViewController(userHomeViewController, animated: true)
+                }
+                
+                break
+            case .WRONG_EMAIL:
+                UIHelper.changeTextFieldColor(emailTextField, placeholderText: "You entered a wrong email address!")
+                break
+            case .WRONG_PASSWORD:
+                UIHelper.changeTextFieldColor(passwordTextField, placeholderText: "You entered a wrong password!")
+                break
+            case .BAD_REQUEST:
+                println("Something went wrong by login")
+                //TODO: Some error handling!
+            }
         }
     }
     

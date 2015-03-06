@@ -8,28 +8,39 @@
 
 import Foundation
 
+var currentUser : User?
 class SessionService {
     
-    func logIn(email : String, password : String) -> Bool {
-        var semaphore = dispatch_semaphore_create(0)
+    func logIn(email : String, password : String) -> SessionLogin {
         let apiPostHandler = ApiPostHandler()
         
         var params = [Session.ROOT: [Session.EMAIL : email, Session.PASSWORD : password]]
-        var url = apiPostHandler.HOST + Session.GENERIC_URL
-        var success = false;
+        var url = Session.GENERIC_URL
+        var logInResponse : SessionLogin?
         apiPostHandler.apiPost(params, url: url) { (succeeded, postResponse) -> () in
             if succeeded {
                 if let HTTPResponse = postResponse.response as? NSHTTPURLResponse {
                     let statusCode = HTTPResponse.statusCode
                     if statusCode == 200 {
-                        success = true
-                        dispatch_semaphore_signal(semaphore)
+                        logInResponse = SessionLogin.SUCCESS
+                        let json = JSON(data: postResponse.data as NSData)
+                        if let userDict = json[User.ROOT].dictionary {
+                            let id = userDict[User.ID]!.intValue
+                            let userName = userDict[User.USER_NAME]!.stringValue
+                            let phoneNumber = userDict[User.PHONE_NUMBER]!.stringValue
+                            currentUser = User(id: id, userName: userName, phoneNumber: phoneNumber)
+                        }
+                    } else if statusCode == 460 {
+                        logInResponse = SessionLogin.WRONG_EMAIL
+                    } else if statusCode == 461 {
+                        logInResponse = SessionLogin.WRONG_PASSWORD
+                    } else {
+                        logInResponse = SessionLogin.BAD_REQUEST
                     }
                 }
             }
         }
         
-        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
-        return success
+        return logInResponse!
     }
 }

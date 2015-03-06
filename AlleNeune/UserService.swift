@@ -8,8 +8,6 @@ import Foundation
 class UserService {
 
     func checkValidity(userName: String, email: String, password: String, passwordConfirmation: String, phoneNumber: String) -> UserValidity {
-        var semaphore = dispatch_semaphore_create(0)
-        
         let apiPostHandler = ApiPostHandler()
         var params : NSDictionary
         let url = User.VALIDITY
@@ -53,11 +51,33 @@ class UserService {
             } else {
                 println("not succeeded")
             }
-            dispatch_semaphore_signal(semaphore)
         }
         
-        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         return validity!
     }
-
+    
+    func userHasClub(userName: String) -> Bool{
+        var params : NSDictionary
+        let url = User.GET_USER_BY_CLUB_NAME
+        var hasClub = false
+        
+        params = [
+            User.ROOT : [
+                User.USER_NAME : userName
+            ]
+        ]
+        
+        ApiPostHandler().apiPost(params, url: url) { (succeeded, postResponse) -> () in
+            if succeeded {
+                if let HTTPResponse = postResponse.response as? NSHTTPURLResponse {
+                    let statusCode = HTTPResponse.statusCode
+                    if statusCode == 200 {
+                        hasClub = true
+                    }
+                }
+            }
+        }
+        
+        return hasClub
+    }
 }

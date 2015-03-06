@@ -6,6 +6,15 @@
 import Foundation
 
 struct User {
+    var id : Int?
+    var userName : String?
+    var firstName : String?
+    var lastName : String?
+    var phoneNumber : String?
+    var email : String?
+    var street : String?
+    var city : String?
+    
     //api parameters
     static let ROOT : String = "user"
     static let ID = "id"
@@ -23,4 +32,10 @@ struct User {
     static let GENERIC_URL = "/users"
     static let VALIDITY : String = User.GENERIC_URL + "/validity"
     static let GET_USER_BY_CLUB_NAME :String = User.GENERIC_URL + "/user_club";
+    
+    init(id : Int, userName : String, phoneNumber : String) {
+        self.id = id;
+        self.userName = userName
+        self.phoneNumber = phoneNumber
+    }
 }
