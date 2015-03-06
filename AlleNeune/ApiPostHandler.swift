@@ -9,7 +9,7 @@
 import Foundation
 
 class ApiPostHandler {
-    var host : String = "http://localhost:3000"
+    let HOST = "http://localhost:3000"
     
     func apiPost(params : NSDictionary, url : String, postCompleted : (succeeded: Bool, postResponse: PostResponse) ->()) {
         var request = NSMutableURLRequest(URL: NSURL(string: url)!)
