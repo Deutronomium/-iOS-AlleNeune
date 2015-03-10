@@ -1,0 +1,9 @@
+
+/* Class = "IBUITextField"; placeholder = "Enter your phone number"; ObjectID = "76N-ZQ-Qbc"; */
+"76N-ZQ-Qbc.placeholder" = "Bitte geben Sie Ihre Telefonnummer ein!";
+
+/* Class = "IBUIBarButtonItem"; title = "Finish"; ObjectID = "Hdo-cn-PeF"; */
+"Hdo-cn-PeF.title" = "Fertig";
+
+/* Class = "IBUINavigationItem"; title = "Enter Phone Number"; ObjectID = "tIF-wk-COi"; */
+"tIF-wk-COi.title" = "Telefonnummer";
