@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhoneNumberControler: MyViewController {
+class PhoneNumberController: MyViewController {
     let userService = UserService()
     var userName : String = ""
     var email : String = ""
@@ -22,7 +22,7 @@ class PhoneNumberControler: MyViewController {
         let phoneNumber = phoneNumberTextField.text
         
         if userService.createUser(userName, email: email, phoneNumber: phoneNumber, password: password, confirmPassword: confirmPassword) {
-            let clubHomeController = ClubHomeController(nibName: "clubHomeController", bundle: nil)
+            let clubHomeController = ClubHomeController(nibName: XIBNames.CLUB_HOME_CONTROLLER.rawValue, bundle: nil)
             navigationController?.pushViewController(clubHomeController, animated: true)
         }
     }

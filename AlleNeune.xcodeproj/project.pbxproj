@@ -26,13 +26,14 @@
 		9985463C1AA6640100E56612 /* AlleNeuneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985463B1AA6640100E56612 /* AlleNeuneTests.swift */; };
 		998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546451AA6666500E56612 /* SwiftyJSON.swift */; };
 		9985688E1AA9FFCE002905F2 /* SessionLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985688D1AA9FFCE002905F2 /* SessionLogin.swift */; };
-		998568911AAA185E002905F2 /* PhoneNumberControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985688F1AAA185E002905F2 /* PhoneNumberControler.swift */; };
+		998568911AAA185E002905F2 /* PhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985688F1AAA185E002905F2 /* PhoneNumberController.swift */; };
 		998568961AAF74E1002905F2 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998568951AAF74E1002905F2 /* MyTextField.swift */; };
 		9985689A1AAF75DD002905F2 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998568991AAF75DD002905F2 /* MyViewController.swift */; };
 		998568A21AAF8998002905F2 /* UserHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998568A41AAF8998002905F2 /* UserHomeController.xib */; };
 		998568A91AAF89DA002905F2 /* SignUpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998568AB1AAF89DA002905F2 /* SignUpController.xib */; };
-		998568AE1AAF8A05002905F2 /* PhoneNumberControler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998568B01AAF8A05002905F2 /* PhoneNumberControler.xib */; };
+		998568AE1AAF8A05002905F2 /* PhoneNumberController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998568B01AAF8A05002905F2 /* PhoneNumberController.xib */; };
 		998568B51AAF8ABE002905F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 998568B71AAF8ABE002905F2 /* Localizable.strings */; };
+		998568BB1AAF918F002905F2 /* XIBNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998568BA1AAF918F002905F2 /* XIBNames.swift */; };
 		99C3CDE21AA9B95D00941CD4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE11AA9B95D00941CD4 /* Utils.swift */; };
 		99C3CDE41AA9C2BA00941CD4 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE31AA9C2BA00941CD4 /* UIHelper.swift */; };
 		99C3CDE71AA9C89400941CD4 /* UserHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE51AA9C89400941CD4 /* UserHomeController.swift */; };
@@ -77,7 +78,7 @@
 		9985463B1AA6640100E56612 /* AlleNeuneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlleNeuneTests.swift; sourceTree = "<group>"; };
 		998546451AA6666500E56612 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9985688D1AA9FFCE002905F2 /* SessionLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionLogin.swift; sourceTree = "<group>"; };
-		9985688F1AAA185E002905F2 /* PhoneNumberControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberControler.swift; sourceTree = "<group>"; };
+		9985688F1AAA185E002905F2 /* PhoneNumberController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberController.swift; sourceTree = "<group>"; };
 		998568951AAF74E1002905F2 /* MyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		998568991AAF75DD002905F2 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		998568A01AAF898E002905F2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
@@ -86,10 +87,11 @@
 		998568A81AAF89B4002905F2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/UserHomeController.strings; sourceTree = "<group>"; };
 		998568AA1AAF89DA002905F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SignUpController.xib; sourceTree = "<group>"; };
 		998568AD1AAF89DC002905F2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SignUpController.strings; sourceTree = "<group>"; };
-		998568AF1AAF8A05002905F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PhoneNumberControler.xib; sourceTree = "<group>"; };
-		998568B21AAF8A07002905F2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/PhoneNumberControler.strings; sourceTree = "<group>"; };
+		998568AF1AAF8A05002905F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PhoneNumberController.xib; sourceTree = "<group>"; };
+		998568B21AAF8A07002905F2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/PhoneNumberController.strings; sourceTree = "<group>"; };
 		998568B61AAF8ABE002905F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		998568B81AAF8ABF002905F2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		998568BA1AAF918F002905F2 /* XIBNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIBNames.swift; sourceTree = "<group>"; };
 		99C3CDE11AA9B95D00941CD4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		99C3CDE31AA9C2BA00941CD4 /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		99C3CDE51AA9C89400941CD4 /* UserHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				549A33BB07090953C2F26E9F /* UserValidity.swift */,
 				9985688D1AA9FFCE002905F2 /* SessionLogin.swift */,
+				998568BA1AAF918F002905F2 /* XIBNames.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -162,7 +165,7 @@
 				99C3CDE51AA9C89400941CD4 /* UserHomeController.swift */,
 				998546271AA6640100E56612 /* LoginController.swift */,
 				992FD21A1AA9A956000CD5A3 /* SignUpController.swift */,
-				9985688F1AAA185E002905F2 /* PhoneNumberControler.swift */,
+				9985688F1AAA185E002905F2 /* PhoneNumberController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -185,7 +188,7 @@
 		997EF32D1AA9ADA3006A7461 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
-				998568B01AAF8A05002905F2 /* PhoneNumberControler.xib */,
+				998568B01AAF8A05002905F2 /* PhoneNumberController.xib */,
 				99C3CDEA1AA9C8E800941CD4 /* ClubHomeController.xib */,
 				998568A41AAF8998002905F2 /* UserHomeController.xib */,
 				998546291AA6640100E56612 /* Main.storyboard */,
@@ -216,6 +219,7 @@
 		998546221AA6640100E56612 /* AlleNeune */ = {
 			isa = PBXGroup;
 			children = (
+				998568B91AAF9051002905F2 /* MyUIComponents */,
 				992FD1DD1AA7BF9A000CD5A3 /* Services */,
 				997EF32D1AA9ADA3006A7461 /* Layouts */,
 				992FD1E11AA7C070000CD5A3 /* ApiStructs */,
@@ -227,8 +231,6 @@
 				9985462C1AA6640100E56612 /* Images.xcassets */,
 				9985462E1AA6640100E56612 /* LaunchScreen.xib */,
 				998546231AA6640100E56612 /* Supporting Files */,
-				998568951AAF74E1002905F2 /* MyTextField.swift */,
-				998568991AAF75DD002905F2 /* MyViewController.swift */,
 			);
 			path = AlleNeune;
 			sourceTree = "<group>";
@@ -256,6 +258,15 @@
 				9985463A1AA6640100E56612 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		998568B91AAF9051002905F2 /* MyUIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				998568951AAF74E1002905F2 /* MyTextField.swift */,
+				998568991AAF75DD002905F2 /* MyViewController.swift */,
+			);
+			name = MyUIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,7 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				998568AE1AAF8A05002905F2 /* PhoneNumberControler.xib in Resources */,
+				998568AE1AAF8A05002905F2 /* PhoneNumberController.xib in Resources */,
 				998568A21AAF8998002905F2 /* UserHomeController.xib in Resources */,
 				9985462B1AA6640100E56612 /* Main.storyboard in Resources */,
 				99C3CDEC1AA9C8E800941CD4 /* ClubHomeController.xib in Resources */,
@@ -364,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998568BB1AAF918F002905F2 /* XIBNames.swift in Sources */,
 				99C3CDEB1AA9C8E800941CD4 /* ClubHomeController.swift in Sources */,
 				998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */,
 				998546281AA6640100E56612 /* LoginController.swift in Sources */,
@@ -386,7 +398,7 @@
 				549A3C316575B9A2851D4C9B /* User.swift in Sources */,
 				549A30F6DA8754A08B88C598 /* Fine.swift in Sources */,
 				549A3016417E6D3852B6ABEA /* UserService.swift in Sources */,
-				998568911AAA185E002905F2 /* PhoneNumberControler.swift in Sources */,
+				998568911AAA185E002905F2 /* PhoneNumberController.swift in Sources */,
 				99C3CDE21AA9B95D00941CD4 /* Utils.swift in Sources */,
 				549A384E3B8DF793B73C791F /* UserValidity.swift in Sources */,
 			);
@@ -447,13 +459,13 @@
 			name = SignUpController.xib;
 			sourceTree = "<group>";
 		};
-		998568B01AAF8A05002905F2 /* PhoneNumberControler.xib */ = {
+		998568B01AAF8A05002905F2 /* PhoneNumberController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				998568AF1AAF8A05002905F2 /* Base */,
 				998568B21AAF8A07002905F2 /* de */,
 			);
-			name = PhoneNumberControler.xib;
+			name = PhoneNumberController.xib;
 			sourceTree = "<group>";
 		};
 		998568B71AAF8ABE002905F2 /* Localizable.strings */ = {

@@ -33,10 +33,10 @@ class LoginController: MyViewController {
             switch logInResponse {
             case .SUCCESS:
                 if userService.userHasClub(currentUser.userName!) {
-                    let clubHomeViewController = ClubHomeController(nibName: "ClubHomeController", bundle: nil)
+                    let clubHomeViewController = ClubHomeController(nibName: XIBNames.CLUB_HOME_CONTROLLER.rawValue, bundle: nil)
                     navigationController?.pushViewController(clubHomeViewController, animated: true)
                 } else {
-                    let userHomeViewController = UserHomeController(nibName: "UserHomeController", bundle: nil)
+                    let userHomeViewController = UserHomeController(nibName: XIBNames.USER_HOME_CONTROLLER.rawValue, bundle: nil)
                     navigationController?.pushViewController(userHomeViewController, animated: true)
                 }
                 
@@ -55,7 +55,7 @@ class LoginController: MyViewController {
     }
     
     @IBAction func signUpAction(sender: AnyObject) {
-        let vc = SignUpController(nibName: "SignUpController", bundle: nil)
+        let vc = SignUpController(nibName: XIBNames.SIGN_UP_CONTROLLER.rawValue, bundle: nil)
         navigationController?.pushViewController(vc, animated: true)
     }
     

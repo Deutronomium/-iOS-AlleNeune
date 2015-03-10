@@ -45,7 +45,7 @@ class SignUpController: MyViewController {
                 let userValidity = userService.checkValidity(userName, email: email, password: password, passwordConfirmation: confirmPassword, phoneNumber: "")
                 switch userValidity {
                 case .VALID :
-                    let phoneNumberViewController = PhoneNumberControler(nibName: "PhoneNumberControler", bundle: nil)
+                    let phoneNumberViewController = PhoneNumberController(nibName: XIBNames.PHONE_NUMBER_CONTROLLER.rawValue, bundle: nil)
                     phoneNumberViewController.userName = userName
                     phoneNumberViewController.email = email
                     phoneNumberViewController.password = password
