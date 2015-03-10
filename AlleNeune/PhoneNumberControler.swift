@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhoneNumberControler: UIViewController {
+class PhoneNumberControler: UIViewController, UITextFieldDelegate {
     let userService = UserService()
     var userName : String = ""
     var email : String = ""
@@ -31,7 +31,7 @@ class PhoneNumberControler: UIViewController {
         navigationController?.navigationBarHidden = true
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.phoneNumberTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,14 +43,14 @@ class PhoneNumberControler: UIViewController {
         navigationController?.navigationBarHidden = true
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
     }
-    */
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
 
 }
