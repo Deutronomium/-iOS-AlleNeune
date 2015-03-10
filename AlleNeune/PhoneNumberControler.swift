@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhoneNumberControler: UIViewController, UITextFieldDelegate {
+class PhoneNumberControler: MyViewController {
     let userService = UserService()
     var userName : String = ""
     var email : String = ""
@@ -30,8 +30,6 @@ class PhoneNumberControler: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         navigationController?.navigationBarHidden = true
         super.viewDidLoad()
-
-        self.phoneNumberTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,15 +40,4 @@ class PhoneNumberControler: UIViewController, UITextFieldDelegate {
     override func viewDidAppear(animated: Bool) {
         navigationController?.navigationBarHidden = true
     }
-
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
-        return true
-    }
-
 }

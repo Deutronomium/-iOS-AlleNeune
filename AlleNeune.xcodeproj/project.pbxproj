@@ -29,6 +29,8 @@
 		9985688E1AA9FFCE002905F2 /* SessionLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985688D1AA9FFCE002905F2 /* SessionLogin.swift */; };
 		998568911AAA185E002905F2 /* PhoneNumberControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985688F1AAA185E002905F2 /* PhoneNumberControler.swift */; };
 		998568921AAA185E002905F2 /* PhoneNumberControler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998568901AAA185E002905F2 /* PhoneNumberControler.xib */; };
+		998568961AAF74E1002905F2 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998568951AAF74E1002905F2 /* MyTextField.swift */; };
+		9985689A1AAF75DD002905F2 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998568991AAF75DD002905F2 /* MyViewController.swift */; };
 		99C3CDE21AA9B95D00941CD4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE11AA9B95D00941CD4 /* Utils.swift */; };
 		99C3CDE41AA9C2BA00941CD4 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE31AA9C2BA00941CD4 /* UIHelper.swift */; };
 		99C3CDE71AA9C89400941CD4 /* UserHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE51AA9C89400941CD4 /* UserHomeController.swift */; };
@@ -77,6 +79,8 @@
 		9985688D1AA9FFCE002905F2 /* SessionLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionLogin.swift; sourceTree = "<group>"; };
 		9985688F1AAA185E002905F2 /* PhoneNumberControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberControler.swift; sourceTree = "<group>"; };
 		998568901AAA185E002905F2 /* PhoneNumberControler.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneNumberControler.xib; sourceTree = "<group>"; };
+		998568951AAF74E1002905F2 /* MyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
+		998568991AAF75DD002905F2 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		99C3CDE11AA9B95D00941CD4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		99C3CDE31AA9C2BA00941CD4 /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		99C3CDE51AA9C89400941CD4 /* UserHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeController.swift; sourceTree = "<group>"; };
@@ -214,6 +218,8 @@
 				9985462C1AA6640100E56612 /* Images.xcassets */,
 				9985462E1AA6640100E56612 /* LaunchScreen.xib */,
 				998546231AA6640100E56612 /* Supporting Files */,
+				998568951AAF74E1002905F2 /* MyTextField.swift */,
+				998568991AAF75DD002905F2 /* MyViewController.swift */,
 			);
 			path = AlleNeune;
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 				99C3CDEB1AA9C8E800941CD4 /* ClubHomeController.swift in Sources */,
 				998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */,
 				998546281AA6640100E56612 /* LoginController.swift in Sources */,
+				998568961AAF74E1002905F2 /* MyTextField.swift in Sources */,
 				99C3CDE41AA9C2BA00941CD4 /* UIHelper.swift in Sources */,
 				9985688E1AA9FFCE002905F2 /* SessionLogin.swift in Sources */,
 				99C8D5611AA700A800D3EF7D /* ApiPostHandler.swift in Sources */,
@@ -359,6 +366,7 @@
 				992FD1E31AA7C086000CD5A3 /* Session.swift in Sources */,
 				549A3A4833195ED9C735B733 /* Club.swift in Sources */,
 				549A341D6C6D6FEA54AFBBCF /* Drink.swift in Sources */,
+				9985689A1AAF75DD002905F2 /* MyViewController.swift in Sources */,
 				549A38966F44FF8A21E38BE1 /* DrinkPayment.swift in Sources */,
 				99C3CDE71AA9C89400941CD4 /* UserHomeController.swift in Sources */,
 				992FD21C1AA9A956000CD5A3 /* SignUpController.swift in Sources */,

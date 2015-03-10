@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginController: UIViewController, UITextFieldDelegate {
+class LoginController: MyViewController {
     
     var response = false;
     let userService = UserService()
@@ -71,16 +71,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(animated: Bool) {
         navigationController?.navigationBarHidden = false
-    }
-    
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
-        return true
     }
 }
 
