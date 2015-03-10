@@ -61,7 +61,7 @@ class LoginController: MyViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBarHidden = false
+        navigationController?.navigationBarHidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,7 +70,7 @@ class LoginController: MyViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        navigationController?.navigationBarHidden = false
+        navigationController?.navigationBarHidden = true
     }
 }
 

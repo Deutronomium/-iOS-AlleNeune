@@ -13,11 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var clubHomeController: UITabBarController?
+    var loginNavigationController: UINavigationController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         application.statusBarHidden = true
         //login view controller to start with
         let loginController = LoginController(nibName: XIBNames.LOGIN_CONTROLLER.rawValue, bundle: nil)
+        self.loginNavigationController = UINavigationController()
+        self.loginNavigationController?.pushViewController(loginController, animated: true)
         
         //tabbed controller to change after login
         let eventViewController = EventViewController(nibName: "EventViewController", bundle: nil)
@@ -25,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let controllers = [eventViewController]
         self.clubHomeController = UITabBarController()
         self.clubHomeController!.setViewControllers(controllers, animated: true)
-        window?.rootViewController = loginController
+        window?.rootViewController = loginNavigationController
         return true
     }
 
