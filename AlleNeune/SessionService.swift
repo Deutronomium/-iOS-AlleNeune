@@ -8,7 +8,7 @@
 
 import Foundation
 
-var currentUser : User?
+var currentUser : User = User()
 class SessionService {
     
     func logIn(email : String, password : String) -> SessionLogin {

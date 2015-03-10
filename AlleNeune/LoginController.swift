@@ -32,7 +32,7 @@ class LoginController: UIViewController {
         if !email.isEmpty && !password.isEmpty {
             switch logInResponse {
             case .SUCCESS:
-                if userService.userHasClub(currentUser!.userName!) {
+                if userService.userHasClub(currentUser.userName!) {
                     let clubHomeViewController = ClubHomeController(nibName: "ClubHomeController", bundle: nil)
                     navigationController?.pushViewController(clubHomeViewController, animated: true)
                 } else {

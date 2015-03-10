@@ -38,4 +38,6 @@ struct User {
         self.userName = userName
         self.phoneNumber = phoneNumber
     }
+    
+    init() {}
 }
