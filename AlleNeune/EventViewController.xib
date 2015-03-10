@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClubHomeController" customModule="AlleNeune" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventViewController" customModule="AlleNeune" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -14,20 +14,14 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ep-Hz-RmX">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                    <items>
-                        <navigationItem title="Club Home" id="xTw-yp-jEX"/>
-                    </items>
-                </navigationBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkq-m1-sf8">
+                    <rect key="frame" x="91" y="66" width="94" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="3Ep-Hz-RmX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4wA-yq-IR0"/>
-                <constraint firstItem="3Ep-Hz-RmX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5OE-Pc-PTY"/>
-                <constraint firstAttribute="trailing" secondItem="3Ep-Hz-RmX" secondAttribute="trailing" id="SWt-cU-otu"/>
-                <constraint firstAttribute="centerX" secondItem="3Ep-Hz-RmX" secondAttribute="centerX" id="TPl-vN-fYY"/>
-            </constraints>
         </view>
     </objects>
 </document>

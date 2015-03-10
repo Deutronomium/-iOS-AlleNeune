@@ -12,5 +12,6 @@ enum XIBNames : String {
     case PHONE_NUMBER_CONTROLLER = "PhoneNumberController",
         CLUB_HOME_CONTROLLER = "ClubHomeController",
         USER_HOME_CONTROLLER = "UserHomeController",
-        SIGN_UP_CONTROLLER = "SignUpController"
+        SIGN_UP_CONTROLLER = "SignUpController",
+        LOGIN_CONTROLLER = "LoginController"
 }

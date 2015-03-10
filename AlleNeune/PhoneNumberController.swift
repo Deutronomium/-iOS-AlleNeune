@@ -22,8 +22,8 @@ class PhoneNumberController: MyViewController {
         let phoneNumber = phoneNumberTextField.text
         
         if userService.createUser(userName, email: email, phoneNumber: phoneNumber, password: password, confirmPassword: confirmPassword) {
-            let clubHomeController = ClubHomeController(nibName: XIBNames.CLUB_HOME_CONTROLLER.rawValue, bundle: nil)
-            navigationController?.pushViewController(clubHomeController, animated: true)
+            let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            appDelegate.window?.rootViewController = appDelegate.clubHomeController
         }
     }
     

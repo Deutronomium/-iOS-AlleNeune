@@ -12,11 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var clubHomeController: UITabBarController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         application.statusBarHidden = true
-        // Override point for customization after application launch.
+        //login view controller to start with
+        let loginController = LoginController(nibName: XIBNames.LOGIN_CONTROLLER.rawValue, bundle: nil)
+        
+        //tabbed controller to change after login
+        let eventViewController = EventViewController(nibName: "EventViewController", bundle: nil)
+        eventViewController.tabBarItem.title = "Event"
+        let controllers = [eventViewController]
+        self.clubHomeController = UITabBarController()
+        self.clubHomeController!.setViewControllers(controllers, animated: true)
+        window?.rootViewController = loginController
         return true
     }
 

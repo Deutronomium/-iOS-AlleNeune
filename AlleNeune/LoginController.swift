@@ -10,13 +10,13 @@ import UIKit
 
 class LoginController: MyViewController {
     
-    var response = false;
-    let userService = UserService()
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBAction func logInAction(sender: AnyObject) {
+    var response = false;
+    let userService = UserService()
+    
+    @IBAction func loginAction(sender: AnyObject) {
         UIHelper.resetBorder(emailTextField, passwordTextField)
         let sessionService = SessionService()
         let email = emailTextField.text
@@ -33,13 +33,12 @@ class LoginController: MyViewController {
             switch logInResponse {
             case .SUCCESS:
                 if userService.userHasClub(currentUser.userName!) {
-                    let clubHomeViewController = ClubHomeController(nibName: XIBNames.CLUB_HOME_CONTROLLER.rawValue, bundle: nil)
-                    navigationController?.pushViewController(clubHomeViewController, animated: true)
+                    let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+                    appDelegate.window?.rootViewController = appDelegate.clubHomeController
                 } else {
                     let userHomeViewController = UserHomeController(nibName: XIBNames.USER_HOME_CONTROLLER.rawValue, bundle: nil)
                     navigationController?.pushViewController(userHomeViewController, animated: true)
                 }
-                
                 break
             case .WRONG_EMAIL:
                 UIHelper.changeTextFieldColor(emailTextField, placeholderText: NSLocalizedString("WRONG_EMAIL", comment: "User entered a wrong email!"))
@@ -52,6 +51,7 @@ class LoginController: MyViewController {
                 //TODO: Some error handling!
             }
         }
+
     }
     
     @IBAction func signUpAction(sender: AnyObject) {
@@ -63,7 +63,7 @@ class LoginController: MyViewController {
         super.viewDidLoad()
         navigationController?.navigationBarHidden = false
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
