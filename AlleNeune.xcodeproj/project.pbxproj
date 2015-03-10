@@ -27,6 +27,8 @@
 		9985463C1AA6640100E56612 /* AlleNeuneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985463B1AA6640100E56612 /* AlleNeuneTests.swift */; };
 		998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546451AA6666500E56612 /* SwiftyJSON.swift */; };
 		9985688E1AA9FFCE002905F2 /* SessionLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985688D1AA9FFCE002905F2 /* SessionLogin.swift */; };
+		998568911AAA185E002905F2 /* PhoneNumberControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985688F1AAA185E002905F2 /* PhoneNumberControler.swift */; };
+		998568921AAA185E002905F2 /* PhoneNumberControler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 998568901AAA185E002905F2 /* PhoneNumberControler.xib */; };
 		99C3CDE21AA9B95D00941CD4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE11AA9B95D00941CD4 /* Utils.swift */; };
 		99C3CDE41AA9C2BA00941CD4 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE31AA9C2BA00941CD4 /* UIHelper.swift */; };
 		99C3CDE71AA9C89400941CD4 /* UserHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3CDE51AA9C89400941CD4 /* UserHomeController.swift */; };
@@ -73,6 +75,8 @@
 		9985463B1AA6640100E56612 /* AlleNeuneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlleNeuneTests.swift; sourceTree = "<group>"; };
 		998546451AA6666500E56612 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9985688D1AA9FFCE002905F2 /* SessionLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionLogin.swift; sourceTree = "<group>"; };
+		9985688F1AAA185E002905F2 /* PhoneNumberControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberControler.swift; sourceTree = "<group>"; };
+		998568901AAA185E002905F2 /* PhoneNumberControler.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneNumberControler.xib; sourceTree = "<group>"; };
 		99C3CDE11AA9B95D00941CD4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		99C3CDE31AA9C2BA00941CD4 /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		99C3CDE51AA9C89400941CD4 /* UserHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				99C3CDE51AA9C89400941CD4 /* UserHomeController.swift */,
 				998546271AA6640100E56612 /* LoginController.swift */,
 				992FD21A1AA9A956000CD5A3 /* SignUpController.swift */,
+				9985688F1AAA185E002905F2 /* PhoneNumberControler.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 		997EF32D1AA9ADA3006A7461 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				998568901AAA185E002905F2 /* PhoneNumberControler.xib */,
 				99C3CDEA1AA9C8E800941CD4 /* ClubHomeController.xib */,
 				99C3CDE61AA9C89400941CD4 /* UserHomeController.xib */,
 				998546291AA6640100E56612 /* Main.storyboard */,
@@ -317,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998568921AAA185E002905F2 /* PhoneNumberControler.xib in Resources */,
 				99C3CDE81AA9C89400941CD4 /* UserHomeController.xib in Resources */,
 				9985462B1AA6640100E56612 /* Main.storyboard in Resources */,
 				99C3CDEC1AA9C8E800941CD4 /* ClubHomeController.xib in Resources */,
@@ -360,6 +367,7 @@
 				549A3C316575B9A2851D4C9B /* User.swift in Sources */,
 				549A30F6DA8754A08B88C598 /* Fine.swift in Sources */,
 				549A3016417E6D3852B6ABEA /* UserService.swift in Sources */,
+				998568911AAA185E002905F2 /* PhoneNumberControler.swift in Sources */,
 				99C3CDE21AA9B95D00941CD4 /* Utils.swift in Sources */,
 				549A384E3B8DF793B73C791F /* UserValidity.swift in Sources */,
 			);

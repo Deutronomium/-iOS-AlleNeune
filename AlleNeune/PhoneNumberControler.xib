@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhoneNumberControler" customModule="AlleNeune" customModuleProvider="target">
+            <connections>
+                <outlet property="phoneNumberTextField" destination="76N-ZQ-Qbc" id="ZKo-yT-98g"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pf-uv-cL0">
+                    <rect key="frame" x="0.0" y="8" width="600" height="44"/>
+                    <items>
+                        <navigationItem title="Enter Phone Number" id="tIF-wk-COi">
+                            <barButtonItem key="rightBarButtonItem" title="Finish" id="Hdo-cn-PeF">
+                                <connections>
+                                    <action selector="finishUserAction:" destination="-1" id="Fqr-08-qjD"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="76N-ZQ-Qbc">
+                    <rect key="frame" x="8" y="82" width="584" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="76N-ZQ-Qbc" secondAttribute="centerX" id="TMB-WA-ugM"/>
+                <constraint firstItem="1pf-uv-cL0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="TRx-K4-nQg"/>
+                <constraint firstAttribute="trailing" secondItem="1pf-uv-cL0" secondAttribute="trailing" id="ZWD-nH-Lox"/>
+                <constraint firstItem="1pf-uv-cL0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="afD-xq-Ogl"/>
+                <constraint firstAttribute="centerX" secondItem="1pf-uv-cL0" secondAttribute="centerX" id="l9U-U5-amG"/>
+                <constraint firstItem="76N-ZQ-Qbc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="lvK-B8-q5X"/>
+                <constraint firstAttribute="trailing" secondItem="76N-ZQ-Qbc" secondAttribute="trailing" constant="8" id="vE0-sL-FYf"/>
+                <constraint firstItem="76N-ZQ-Qbc" firstAttribute="top" secondItem="1pf-uv-cL0" secondAttribute="bottom" constant="30" id="y5w-HD-BqW"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

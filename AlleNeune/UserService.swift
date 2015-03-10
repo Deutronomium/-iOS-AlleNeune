@@ -80,4 +80,32 @@ class UserService {
         
         return hasClub
     }
+    
+    func createUser(userName: String, email : String, phoneNumber: String, password: String, confirmPassword : String) -> Bool {
+        var params : NSDictionary
+        let url = User.GENERIC_URL
+        var userCreated = false
+        params = [
+            User.ROOT : [
+                User.USER_NAME : userName,
+                User.EMAIL : email,
+                User.PHONE_NUMBER : phoneNumber,
+                User.PASSWORD : password,
+                User.PASSWORD_CONFIRMATION : confirmPassword
+            ]
+        ]
+        
+        ApiPostHandler().apiPost(params, url: url) { (succeeded, postResponse) -> () in
+            if succeeded {
+                if let HTTPResponse = postResponse.response as? NSHTTPURLResponse {
+                    let statusCode = HTTPResponse.statusCode
+                    if statusCode == 201 {
+                        userCreated = true
+                    }
+                }
+            }
+        }
+        
+        return userCreated
+    }
 }
