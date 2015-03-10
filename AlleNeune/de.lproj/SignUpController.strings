@@ -9,10 +9,10 @@
 "OHO-64-LpI.title" = "Zurück";
 
 /* Class = "IBUITextField"; placeholder = "Confirm Password"; ObjectID = "Wna-Zg-ul3"; */
-"Wna-Zg-ul3.placeholder" = "Password bestätigen";
+"Wna-Zg-ul3.placeholder" = "Passwort bestätigen";
 
 /* Class = "IBUITextField"; placeholder = "Password"; ObjectID = "jfD-nx-P1v"; */
-"jfD-nx-P1v.placeholder" = "Password";
+"jfD-nx-P1v.placeholder" = "Passwort";
 
 /* Class = "IBUITextField"; placeholder = "Email"; ObjectID = "pU6-Iy-cpV"; */
 "pU6-Iy-cpV.placeholder" = "Email";

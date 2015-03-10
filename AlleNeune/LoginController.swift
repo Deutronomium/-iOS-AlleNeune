@@ -23,10 +23,10 @@ class LoginController: MyViewController {
         let password = passwordTextField.text
         let logInResponse = sessionService.logIn(email, password: password)
         if email.isEmpty {
-            UIHelper.changeTextFieldColor(emailTextField, placeholderText: "You did not enter an email address!")
+            UIHelper.changeTextFieldColor(emailTextField, placeholderText: NSLocalizedString("ENTER_EMAIL", comment: "Enter email"))
         }
         if password.isEmpty {
-            UIHelper.changeTextFieldColor(passwordTextField, placeholderText: "You did not enter a password!")
+            UIHelper.changeTextFieldColor(passwordTextField, placeholderText: NSLocalizedString("ENTER_PASSWORD", comment: "Enter password"))
         }
         
         if !email.isEmpty && !password.isEmpty {
@@ -42,10 +42,10 @@ class LoginController: MyViewController {
                 
                 break
             case .WRONG_EMAIL:
-                UIHelper.changeTextFieldColor(emailTextField, placeholderText: "You entered a wrong email address!")
+                UIHelper.changeTextFieldColor(emailTextField, placeholderText: NSLocalizedString("WRONG_EMAIL", comment: "User entered a wrong email!"))
                 break
             case .WRONG_PASSWORD:
-                UIHelper.changeTextFieldColor(passwordTextField, placeholderText: "You entered a wrong password!")
+                UIHelper.changeTextFieldColor(passwordTextField, placeholderText: NSLocalizedString("WRONG_PASSWORD", comment: "User entered a wrong password!"))
                 break
             case .BAD_REQUEST:
                 println("Something went wrong by login")

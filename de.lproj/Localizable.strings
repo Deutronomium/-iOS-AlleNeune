@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  AlleNeune
+
+  Created by Patrick Engelkes on 10/03/15.
+  Copyright (c) 2015 Patrick Engelkes. All rights reserved.
+*/
+ENTER_USERNAME = "Bitte geben Sie einen Benutzernamen ein!";
+ENTER_EMAIL = "Bitte geben Sie eine EMail-Adresse ein!";
+ENTER_PASSWORD = "Bitte geben Sie ein Passwort ein!";
+ENTER_CONFIRM_PASSWORD = "Bitte bestätigen Sie Ihr Passwort!";
+
+USER_NAME_ALREADY_USED = "Ihr Benutzername wird bereits benutzt!";
+EMAIL_ALREADY_USED = "Ihre EMail-Adresse wird bereits benutzt!";
+PASSWORDS_DO_NOT_MATCH = "Ihre Passwörter stimmen nicht überein!";
+
+WRONG_EMAIL = "Sie haben eine falsche EMail-Adresse eingegeben!";
+WRONG_PASSWORD = "Sie haben ein falsches Passwort eingegeben!";

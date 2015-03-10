@@ -25,19 +25,19 @@ class SignUpController: MyViewController {
         let confirmPassword : String = confirmPasswordTextField.text
         
         if userName.isEmpty {
-            UIHelper.changeTextFieldColor(userNameTextField, placeholderText: "Please enter a username!")
+            UIHelper.changeTextFieldColor(userNameTextField, placeholderText: NSLocalizedString("ENTER_USERNAME", comment: "Enter Username"))
         }
         
         if email.isEmpty {
-            UIHelper.changeTextFieldColor(emailTextField, placeholderText: "Please enter an email!")
+            UIHelper.changeTextFieldColor(emailTextField, placeholderText: NSLocalizedString("ENTER_EMAIL", comment: "Enter email"))
         }
         
         if password.isEmpty {
-            UIHelper.changeTextFieldColor(passwordTextField, placeholderText: "Please enter a password")
+            UIHelper.changeTextFieldColor(passwordTextField, placeholderText: NSLocalizedString("ENTER_PASSWORD", comment: "Enter password"))
         }
         
         if password.isEmpty {
-            UIHelper.changeTextFieldColor(confirmPasswordTextField, placeholderText: "Please confirm your password")
+            UIHelper.changeTextFieldColor(confirmPasswordTextField, placeholderText: NSLocalizedString("ENTER_CONFIRM_PASSWORD", comment: "Enter confirmation password"))
         }
         
         if !userName.isEmpty && !email.isEmpty && !password.isEmpty && !confirmPassword.isEmpty {
@@ -52,16 +52,16 @@ class SignUpController: MyViewController {
                     phoneNumberViewController.confirmPassword = confirmPassword
                     navigationController?.pushViewController(phoneNumberViewController, animated: true)
                 case .NAME_AND_EMAIL_USED:
-                    UIHelper.changeTextFieldColor(userNameTextField, placeholderText: "Username already in use!")
-                    UIHelper.changeTextFieldColor(emailTextField, placeholderText: "Email already in use!")
+                    UIHelper.changeTextFieldColor(userNameTextField, placeholderText: NSLocalizedString("USERNAME_ALREADY_USED", comment: "Username is already in use!"))
+                    UIHelper.changeTextFieldColor(emailTextField, placeholderText: NSLocalizedString("EMAIL_ALREADY_USED", comment: "Email is already in use!"))
                 case .NAME_USED:
-                    UIHelper.changeTextFieldColor(userNameTextField, placeholderText: "Username already in use!")
+                    UIHelper.changeTextFieldColor(userNameTextField, placeholderText: NSLocalizedString("USERNAME_ALREADY_USED", comment: "Username is already in use!"))
                 case .EMAIL_USED:
-                    UIHelper.changeTextFieldColor(emailTextField, placeholderText: "Email already in use!")
+                    UIHelper.changeTextFieldColor(emailTextField, placeholderText: NSLocalizedString("EMAIL_ALREADY_USED", comment: "Email is already in use!"))
                 }
             } else {
-                UIHelper.changeTextFieldColor(passwordTextField, placeholderText: "Passwords do not match!")
-                UIHelper.changeTextFieldColor(confirmPasswordTextField, placeholderText: "Passwords do not match!")
+                UIHelper.changeTextFieldColor(passwordTextField, placeholderText: NSLocalizedString("PASSWORDS_DO_NOT_MATCH", comment: "Passwords do not match"))
+                UIHelper.changeTextFieldColor(confirmPasswordTextField, placeholderText: NSLocalizedString("PASSWORDS_DO_NOT_MATCH", comment: "Passwords do not match"))
             }
         }
     }
