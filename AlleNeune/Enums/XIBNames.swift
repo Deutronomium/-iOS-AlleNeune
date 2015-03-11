@@ -13,5 +13,8 @@ enum XIBNames : String {
         CLUB_HOME_CONTROLLER = "ClubHomeController",
         USER_HOME_CONTROLLER = "UserHomeController",
         SIGN_UP_CONTROLLER = "SignUpController",
-        LOGIN_CONTROLLER = "LoginController"
+        LOGIN_CONTROLLER = "LoginController",
+        EVENT_CONTROLLER = "EventViewController",
+        DRINK_CONTROLLER = "DrinkViewController",
+        FINE_CONTROLLER = "FineViewController"
 }

@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   AlleNeune
 
@@ -16,3 +16,7 @@ PASSWORDS_DO_NOT_MATCH="Your passwords do not match!";
 
 WRONG_EMAIL="You entered a wrong email!";
 WRONG_PASSWORD="You entered a wrong password!";
+
+EVENTS = "Events";
+DRINKS = "Drinks";
+FINES = "Fines";

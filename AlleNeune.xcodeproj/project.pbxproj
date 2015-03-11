@@ -17,9 +17,13 @@
 		549A3C316575B9A2851D4C9B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A3816AEADFE9D9B62F2B4 /* User.swift */; };
 		549A3CCD4B2692F9B32DFC15 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A36D2ABD5CABFA77DB7C1 /* Event.swift */; };
 		9908C6331AAF9CB5007F8679 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9908C6311AAF9CB5007F8679 /* EventViewController.swift */; };
-		9908C6341AAF9CB5007F8679 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9908C6321AAF9CB5007F8679 /* EventViewController.xib */; };
 		9908C6391AAFA5BF007F8679 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9908C6371AAFA5BF007F8679 /* LoginController.swift */; };
 		9908C63B1AB01C54007F8679 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9908C63D1AB01C54007F8679 /* LoginController.xib */; };
+		9908C6421AB0215F007F8679 /* FineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9908C6401AB0215F007F8679 /* FineViewController.swift */; };
+		9908C64A1AB0240B007F8679 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9908C6481AB0240B007F8679 /* DrinkViewController.swift */; };
+		9908C64C1AB026CD007F8679 /* FineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9908C64E1AB026CD007F8679 /* FineViewController.xib */; };
+		9908C6511AB02701007F8679 /* DrinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9908C6531AB02701007F8679 /* DrinkViewController.xib */; };
+		9908C6561AB02769007F8679 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9908C6581AB02769007F8679 /* EventViewController.xib */; };
 		992FD1E31AA7C086000CD5A3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992FD1E21AA7C086000CD5A3 /* Session.swift */; };
 		992FD21C1AA9A956000CD5A3 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992FD21A1AA9A956000CD5A3 /* SignUpController.swift */; };
 		998546261AA6640100E56612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546251AA6640100E56612 /* AppDelegate.swift */; };
@@ -65,10 +69,17 @@
 		549A3B8F1082B2855CF6DBFD /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		549A3FD1E297F9127D8F6819 /* Club.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
 		9908C6311AAF9CB5007F8679 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
-		9908C6321AAF9CB5007F8679 /* EventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
 		9908C6371AAFA5BF007F8679 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		9908C63C1AB01C54007F8679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginController.xib; sourceTree = "<group>"; };
 		9908C63F1AB01C57007F8679 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LoginController.strings; sourceTree = "<group>"; };
+		9908C6401AB0215F007F8679 /* FineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FineViewController.swift; sourceTree = "<group>"; };
+		9908C6481AB0240B007F8679 /* DrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
+		9908C64D1AB026CD007F8679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FineViewController.xib; sourceTree = "<group>"; };
+		9908C6501AB026CF007F8679 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FineViewController.strings; sourceTree = "<group>"; };
+		9908C6521AB02701007F8679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DrinkViewController.xib; sourceTree = "<group>"; };
+		9908C6551AB02703007F8679 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/DrinkViewController.strings; sourceTree = "<group>"; };
+		9908C6571AB02769007F8679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EventViewController.xib; sourceTree = "<group>"; };
+		9908C65A1AB0276A007F8679 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/EventViewController.strings; sourceTree = "<group>"; };
 		992FD1E21AA7C086000CD5A3 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		992FD21A1AA9A956000CD5A3 /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		998546201AA6640100E56612 /* AlleNeune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlleNeune.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +172,8 @@
 		992FD1E01AA7BFE0000CD5A3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				9908C6481AB0240B007F8679 /* DrinkViewController.swift */,
+				9908C6401AB0215F007F8679 /* FineViewController.swift */,
 				99C3CDE51AA9C89400941CD4 /* UserHomeController.swift */,
 				992FD21A1AA9A956000CD5A3 /* SignUpController.swift */,
 				9985688F1AAA185E002905F2 /* PhoneNumberController.swift */,
@@ -189,10 +202,12 @@
 			isa = PBXGroup;
 			children = (
 				9908C63D1AB01C54007F8679 /* LoginController.xib */,
-				9908C6321AAF9CB5007F8679 /* EventViewController.xib */,
+				9908C6581AB02769007F8679 /* EventViewController.xib */,
+				9908C64E1AB026CD007F8679 /* FineViewController.xib */,
 				998568B01AAF8A05002905F2 /* PhoneNumberController.xib */,
 				998568A41AAF8998002905F2 /* UserHomeController.xib */,
 				998568AB1AAF89DA002905F2 /* SignUpController.xib */,
+				9908C6531AB02701007F8679 /* DrinkViewController.xib */,
 			);
 			name = Layouts;
 			sourceTree = "<group>";
@@ -351,8 +366,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				998568AE1AAF8A05002905F2 /* PhoneNumberController.xib in Resources */,
+				9908C6511AB02701007F8679 /* DrinkViewController.xib in Resources */,
+				9908C64C1AB026CD007F8679 /* FineViewController.xib in Resources */,
 				9908C63B1AB01C54007F8679 /* LoginController.xib in Resources */,
-				9908C6341AAF9CB5007F8679 /* EventViewController.xib in Resources */,
+				9908C6561AB02769007F8679 /* EventViewController.xib in Resources */,
 				998568A21AAF8998002905F2 /* UserHomeController.xib in Resources */,
 				998546301AA6640100E56612 /* LaunchScreen.xib in Resources */,
 				998568B51AAF8ABE002905F2 /* Localizable.strings in Resources */,
@@ -394,9 +411,11 @@
 				99C3CDE71AA9C89400941CD4 /* UserHomeController.swift in Sources */,
 				992FD21C1AA9A956000CD5A3 /* SignUpController.swift in Sources */,
 				549A3CCD4B2692F9B32DFC15 /* Event.swift in Sources */,
+				9908C6421AB0215F007F8679 /* FineViewController.swift in Sources */,
 				549A3A0266ECEE31302FBF80 /* FinePayment.swift in Sources */,
 				549A3C316575B9A2851D4C9B /* User.swift in Sources */,
 				549A30F6DA8754A08B88C598 /* Fine.swift in Sources */,
+				9908C64A1AB0240B007F8679 /* DrinkViewController.swift in Sources */,
 				549A3016417E6D3852B6ABEA /* UserService.swift in Sources */,
 				998568911AAA185E002905F2 /* PhoneNumberController.swift in Sources */,
 				99C3CDE21AA9B95D00941CD4 /* Utils.swift in Sources */,
@@ -430,6 +449,33 @@
 				9908C63F1AB01C57007F8679 /* de */,
 			);
 			name = LoginController.xib;
+			sourceTree = "<group>";
+		};
+		9908C64E1AB026CD007F8679 /* FineViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9908C64D1AB026CD007F8679 /* Base */,
+				9908C6501AB026CF007F8679 /* de */,
+			);
+			name = FineViewController.xib;
+			sourceTree = "<group>";
+		};
+		9908C6531AB02701007F8679 /* DrinkViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9908C6521AB02701007F8679 /* Base */,
+				9908C6551AB02703007F8679 /* de */,
+			);
+			name = DrinkViewController.xib;
+			sourceTree = "<group>";
+		};
+		9908C6581AB02769007F8679 /* EventViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9908C6571AB02769007F8679 /* Base */,
+				9908C65A1AB0276A007F8679 /* de */,
+			);
+			name = EventViewController.xib;
 			sourceTree = "<group>";
 		};
 		9985462E1AA6640100E56612 /* LaunchScreen.xib */ = {

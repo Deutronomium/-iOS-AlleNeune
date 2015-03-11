@@ -24,16 +24,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.loginNavigationController = UINavigationController()
         self.loginNavigationController?.pushViewController(loginController, animated: true)
         
-        //tabbed controller to change after login
-        let eventViewController = EventViewController(nibName: "EventViewController", bundle: nil)
-        eventViewController.tabBarItem.title = "Event"
-        let controllers = [eventViewController]
+        //init club home controllre for tabbed view
         self.clubHomeController = UITabBarController()
+        
+        //init controllers for different tabs - club home tabs
+        let eventViewController = EventViewController(nibName: XIBNames.EVENT_CONTROLLER.rawValue, bundle: nil)
+        let fineViewController = FineViewController(nibName: XIBNames.FINE_CONTROLLER.rawValue, bundle: nil)
+        let drinkViewController = DrinkViewController(nibName: XIBNames.DRINK_CONTROLLER.rawValue, bundle: nil)
+        
+        //Set names for tabs
+        eventViewController.tabBarItem.title = NSLocalizedString("EVENTS", comment: "Event tab title")
+        fineViewController.tabBarItem.title = NSLocalizedString("FINES", comment: "Fine tab title")
+        drinkViewController.tabBarItem.title = NSLocalizedString("DRINKS", comment: "Drink tab title")
+
+        //set controllers for club home controller
+        let controllers = [eventViewController, fineViewController, drinkViewController]
         self.clubHomeController!.setViewControllers(controllers, animated: true)
+        
+        //prepare to start without main storyboard
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window?.rootViewController = loginNavigationController
-        self.window?.backgroundColor = UIColor.whiteColor()
-        self.window?.makeKeyAndVisible()
+        if let window = window {
+            self.window?.rootViewController = loginNavigationController
+            self.window?.backgroundColor = UIColor.whiteColor()
+            self.window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 
