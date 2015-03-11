@@ -1,15 +1,15 @@
 
 /* Class = "IBUIButton"; normalTitle = "Login"; ObjectID = "2tH-ss-ZxB"; */
-"2tH-ss-ZxB.normalTitle" = "Login";
+"2tH-ss-ZxB.normalTitle" = "Anmelden";
 
 /* Class = "IBUITextField"; placeholder = "Enter your username or email"; ObjectID = "KLb-2T-GKY"; */
-"KLb-2T-GKY.placeholder" = "Enter your username or email";
+"KLb-2T-GKY.placeholder" = "Benutzername oder EMail-Adresse eingeben";
 
 /* Class = "IBUINavigationItem"; title = "Login"; ObjectID = "Q4k-dy-BPm"; */
-"Q4k-dy-BPm.title" = "Login";
+"Q4k-dy-BPm.title" = "Anmelden";
 
 /* Class = "IBUITextField"; placeholder = "Enter your password"; ObjectID = "QDE-Ss-x8p"; */
-"QDE-Ss-x8p.placeholder" = "Enter your password";
+"QDE-Ss-x8p.placeholder" = "Password eingeben";
 
 /* Class = "IBUIButton"; normalTitle = "Sign Up"; ObjectID = "edY-GH-Uuh"; */
-"edY-GH-Uuh.normalTitle" = "Sign Up";
+"edY-GH-Uuh.normalTitle" = "Registrieren";

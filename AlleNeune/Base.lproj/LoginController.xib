@@ -34,10 +34,6 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edY-GH-Uuh">
                     <rect key="frame" x="273" y="264" width="55" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="55" id="WTa-Tg-wuG"/>
-                        <constraint firstAttribute="height" constant="30" id="veK-Af-nav"/>
-                    </constraints>
                     <state key="normal" title="Sign Up">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -47,10 +43,6 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tH-ss-ZxB">
                     <rect key="frame" x="281" y="204" width="38" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="SnY-yu-zzz"/>
-                        <constraint firstAttribute="width" constant="38" id="gbW-b2-dN1"/>
-                    </constraints>
                     <state key="normal" title="Login">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -61,21 +53,22 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="KLb-2T-GKY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="7gK-F8-8LH"/>
-                <constraint firstAttribute="centerX" secondItem="2fq-XK-DbU" secondAttribute="centerX" id="EIw-C6-gnc"/>
-                <constraint firstItem="2fq-XK-DbU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Lah-X9-dUc"/>
-                <constraint firstItem="QDE-Ss-x8p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="TtC-Q5-bux"/>
-                <constraint firstItem="2tH-ss-ZxB" firstAttribute="top" secondItem="QDE-Ss-x8p" secondAttribute="bottom" constant="50" id="Wnx-dy-Rvr"/>
-                <constraint firstItem="KLb-2T-GKY" firstAttribute="top" secondItem="2fq-XK-DbU" secondAttribute="bottom" constant="30" id="Wo0-FX-EBj"/>
-                <constraint firstAttribute="centerX" secondItem="2tH-ss-ZxB" secondAttribute="centerX" id="XFx-T3-1hx"/>
-                <constraint firstAttribute="centerX" secondItem="edY-GH-Uuh" secondAttribute="centerX" id="asU-fg-unC"/>
-                <constraint firstAttribute="trailing" secondItem="KLb-2T-GKY" secondAttribute="trailing" constant="8" id="bUZ-uf-aNN"/>
-                <constraint firstItem="QDE-Ss-x8p" firstAttribute="top" secondItem="KLb-2T-GKY" secondAttribute="bottom" constant="20" id="bja-F9-tt0"/>
-                <constraint firstAttribute="trailing" secondItem="QDE-Ss-x8p" secondAttribute="trailing" constant="8" id="dEi-o9-ljx"/>
-                <constraint firstAttribute="trailing" secondItem="2fq-XK-DbU" secondAttribute="trailing" id="g4e-je-b6j"/>
-                <constraint firstItem="edY-GH-Uuh" firstAttribute="top" secondItem="2tH-ss-ZxB" secondAttribute="bottom" constant="30" id="i2o-wA-Esd"/>
-                <constraint firstItem="2fq-XK-DbU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pgF-NQ-dbU"/>
-                <constraint firstAttribute="centerX" secondItem="KLb-2T-GKY" secondAttribute="centerX" id="rL8-aR-jk7"/>
+                <constraint firstItem="2fq-XK-DbU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1PM-zv-5uN"/>
+                <constraint firstAttribute="centerX" secondItem="edY-GH-Uuh" secondAttribute="centerX" id="1wg-ei-ZaC"/>
+                <constraint firstAttribute="centerX" secondItem="KLb-2T-GKY" secondAttribute="centerX" id="4Vu-I1-7cc"/>
+                <constraint firstItem="edY-GH-Uuh" firstAttribute="top" secondItem="2tH-ss-ZxB" secondAttribute="bottom" constant="30" id="8a9-vH-5by"/>
+                <constraint firstItem="QDE-Ss-x8p" firstAttribute="top" secondItem="KLb-2T-GKY" secondAttribute="bottom" constant="20" id="FEt-Vc-sqe"/>
+                <constraint firstItem="QDE-Ss-x8p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Gvq-ha-Qmq"/>
+                <constraint firstItem="KLb-2T-GKY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="HaY-8g-wWo"/>
+                <constraint firstItem="KLb-2T-GKY" firstAttribute="top" secondItem="2fq-XK-DbU" secondAttribute="bottom" constant="30" id="I9T-bo-KH2"/>
+                <constraint firstAttribute="trailing" secondItem="2fq-XK-DbU" secondAttribute="trailing" id="INL-DV-S66"/>
+                <constraint firstItem="2tH-ss-ZxB" firstAttribute="top" secondItem="QDE-Ss-x8p" secondAttribute="bottom" constant="50" id="RgC-3q-kP8"/>
+                <constraint firstAttribute="centerX" secondItem="2tH-ss-ZxB" secondAttribute="centerX" id="VSD-nd-mBo"/>
+                <constraint firstAttribute="centerX" secondItem="2fq-XK-DbU" secondAttribute="centerX" id="bz7-5h-uwX"/>
+                <constraint firstAttribute="trailing" secondItem="KLb-2T-GKY" secondAttribute="trailing" constant="8" id="cfg-s1-iWP"/>
+                <constraint firstAttribute="trailing" secondItem="QDE-Ss-x8p" secondAttribute="trailing" constant="8" id="mzN-za-5Sa"/>
+                <constraint firstItem="2fq-XK-DbU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qea-5X-quV"/>
+                <constraint firstAttribute="centerX" secondItem="QDE-Ss-x8p" secondAttribute="centerX" id="sJX-vn-9fm"/>
             </constraints>
         </view>
     </objects>
