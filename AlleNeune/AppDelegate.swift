@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //init controllers for different tabs - club home tabs
         let eventViewController = EventViewController(nibName: XIBNames.EVENT_CONTROLLER.rawValue, bundle: nil)
+        //let eventTableViewController = EventTableViewController(nibName: "EventTableViewController", bundle: nil)
         let fineViewController = FineViewController(nibName: XIBNames.FINE_CONTROLLER.rawValue, bundle: nil)
         let drinkViewController = DrinkViewController(nibName: XIBNames.DRINK_CONTROLLER.rawValue, bundle: nil)
         

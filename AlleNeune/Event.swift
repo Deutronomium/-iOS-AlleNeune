@@ -6,6 +6,11 @@
 import Foundation
 
 struct Event {
+    //attributes
+    var id : Int?
+    var name : String?
+    var date : String?
+    
     //api parameters
     static let ROOT = "event"
     static let ID = "id"
@@ -17,4 +22,10 @@ struct Event {
     static let GENERIC_URL = "/events"
     static let GET_PARTICIPANTS : String = Event.GENERIC_URL + "/get_participants"
     static let GET_BY_CLUB : String = Event.GENERIC_URL + "/get_by_club"
+    
+    init(id : Int, name : String, date : String) {
+        self.id = id
+        self.name = name
+        self.date = date
+    }
 }

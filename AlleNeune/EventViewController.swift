@@ -8,12 +8,25 @@
 
 import UIKit
 
-class EventViewController: UIViewController {
+class EventViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var eventsTable: UITableView!
+    let eventService = EventService()
+    var items : [Event] = [Event(id: 1, name: "FirstName", date: "FirstDate"), Event(id: 1, name: "SecondName", date: "SecondDate")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        eventsTable.delegate = self
+        eventsTable.dataSource = self
+        
+        eventsTable.registerNib(UINib(nibName: XIBNames.EVENT_CELL.rawValue, bundle: nil), forCellReuseIdentifier: CustomCellNames.EVENT_CELL.rawValue)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        var events = eventService.getEventsByClub(currentClub.id!)
+        eventsTable.delegate? = self
+        eventsTable.dataSource? = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +34,21 @@ class EventViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return items.count;
     }
-    */
-
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(CustomCellNames.EVENT_CELL.rawValue, forIndexPath: indexPath) as EventTableViewCell
+        
+        let event = items[indexPath.row]
+        
+        //cell.contentView.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth
+        cell.eventNameLabel.text = event.name
+        cell.eventDateLabel.text = event.date
+        
+        return cell
+    }
 }

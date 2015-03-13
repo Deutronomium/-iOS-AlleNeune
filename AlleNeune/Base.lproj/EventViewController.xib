@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventViewController" customModule="AlleNeune" customModuleProvider="target">
             <connections>
+                <outlet property="eventsTable" destination="cY5-4t-0s3" id="2Sq-T2-tfr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,12 +21,20 @@
                         <navigationItem title="Events" id="2OF-qM-Qgo"/>
                     </items>
                 </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cY5-4t-0s3">
+                    <rect key="frame" x="0.0" y="46" width="600" height="548"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="p9z-3j-I5V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cdt-Ue-3Hx"/>
                 <constraint firstAttribute="centerX" secondItem="p9z-3j-I5V" secondAttribute="centerX" id="ND8-E6-LMX"/>
+                <constraint firstAttribute="trailing" secondItem="cY5-4t-0s3" secondAttribute="trailing" id="QPg-LJ-7nF"/>
+                <constraint firstItem="cY5-4t-0s3" firstAttribute="top" secondItem="p9z-3j-I5V" secondAttribute="bottom" constant="2" id="RIx-T7-c2n"/>
+                <constraint firstAttribute="bottom" secondItem="cY5-4t-0s3" secondAttribute="bottom" constant="6" id="cVD-h3-T6y"/>
                 <constraint firstItem="p9z-3j-I5V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="heZ-6Z-aHV"/>
+                <constraint firstItem="cY5-4t-0s3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tG5-2s-8tz"/>
                 <constraint firstAttribute="trailing" secondItem="p9z-3j-I5V" secondAttribute="trailing" id="ywk-QD-tQq"/>
             </constraints>
         </view>

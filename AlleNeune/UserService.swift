@@ -5,6 +5,7 @@
 
 import Foundation
 
+var currentClub : Club = Club()
 class UserService {
 
     func checkValidity(userName: String, email: String, password: String, passwordConfirmation: String, phoneNumber: String) -> UserValidity {
@@ -72,7 +73,13 @@ class UserService {
                 if let HTTPResponse = postResponse.response as? NSHTTPURLResponse {
                     let statusCode = HTTPResponse.statusCode
                     if statusCode == 200 {
-                        hasClub = true
+                        let json = JSON(data: postResponse.data as NSData)
+                        if let clubDict = json[Club.ROOT].dictionary {
+                            let id = clubDict[Club.ID]!.intValue
+                            let name = clubDict[Club.NAME]!.stringValue
+                            currentClub = Club(id: id, name: name)
+                            hasClub = true
+                        }
                     }
                 }
             }
