@@ -17,8 +17,13 @@ class EventViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         eventService.getEventsByClub(currentClub.id!)
-        self.tabBarController?.title = "Events"
+        
+        setNavigation()
         eventsTable.registerNib(UINib(nibName: XIBNames.EVENT_CELL.rawValue, bundle: nil), forCellReuseIdentifier: CustomCellNames.EVENT_CELL.rawValue)
+    }
+    
+    func createEvent() {
+        performSegueWithIdentifier("createEventSegue", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +32,13 @@ class EventViewController: UIViewController, UITableViewDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
+        setNavigation()
+    }
+    
+    func setNavigation() {
+        let createEventBarButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "createEvent")
         self.tabBarController?.title = "Events"
+        self.tabBarController?.navigationItem.rightBarButtonItem = createEventBarButton
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

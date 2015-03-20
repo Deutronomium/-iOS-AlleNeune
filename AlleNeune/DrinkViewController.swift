@@ -12,8 +12,7 @@ class DrinkViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.title = "Drinks"
-        // Do any additional setup after loading the view.
+        setNavigation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +22,16 @@ class DrinkViewController: UIViewController {
     
 
     override func viewDidAppear(animated: Bool) {
+        setNavigation()
+    }
+    
+    func setNavigation() {
+        let createDrinkButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "createDrink")
         self.tabBarController?.title = "Drinks"
+        self.tabBarController?.navigationItem.rightBarButtonItem = createDrinkButton
+    }
+    
+    func createDrink() {
+        performSegueWithIdentifier("createDrinkSegue", sender: self)
     }
 }

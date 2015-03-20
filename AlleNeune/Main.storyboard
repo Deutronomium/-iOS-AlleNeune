@@ -103,6 +103,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Drinks" id="pZb-gi-C8d"/>
+                    <connections>
+                        <segue destination="mxK-uu-1sR" kind="show" identifier="createDrinkSegue" id="VVN-KA-Adz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i46-Yd-DTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,10 +144,49 @@
                     <tabBarItem key="tabBarItem" title="Events" id="VsN-HF-plY"/>
                     <connections>
                         <outlet property="eventsTable" destination="o63-Yg-1bG" id="osh-9z-dgO"/>
+                        <segue destination="oeu-Gn-fIh" kind="show" identifier="createEventSegue" id="Jmo-Yn-Nl6"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="5908" y="-169"/>
+        </scene>
+        <!--Create Event-->
+        <scene sceneID="COQ-YK-LeJ">
+            <objects>
+                <viewController id="oeu-Gn-fIh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hfU-ag-dBc"/>
+                        <viewControllerLayoutGuide type="bottom" id="nib-me-oE8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cie-ru-Cvo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Event" id="Z6c-78-pYA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juC-xx-h3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6586" y="-169"/>
+        </scene>
+        <!--Create Drink-->
+        <scene sceneID="mRv-3F-Ixa">
+            <objects>
+                <viewController id="mxK-uu-1sR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e9D-7N-Kbt"/>
+                        <viewControllerLayoutGuide type="bottom" id="RbT-nt-FIi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GJz-3X-DCj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Drink" id="4qn-Tx-B7T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1VA-DT-JcF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6586" y="482"/>
         </scene>
         <!--Club Tab Bar Controller-->
         <scene sceneID="2eq-EG-jqw">
@@ -180,10 +222,32 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Fines" id="Zwd-9N-br3"/>
+                    <connections>
+                        <segue destination="c90-B3-HmG" kind="show" identifier="createFineSegue" id="AfH-x1-bSi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HY-R4-bZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5908" y="1139"/>
+        </scene>
+        <!--Create Fine-->
+        <scene sceneID="k3j-Od-0m3">
+            <objects>
+                <viewController id="c90-B3-HmG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ux7-2J-3wo"/>
+                        <viewControllerLayoutGuide type="bottom" id="MYY-WD-snh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4SS-wD-Y7I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Fine" id="1fo-vX-GZx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ofW-Su-Qit" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6586" y="1145"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="eF8-dC-S8n">

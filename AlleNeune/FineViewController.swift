@@ -12,9 +12,7 @@ class FineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.title = "Fines"
-
-        // Do any additional setup after loading the view.
+        setNavigation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +22,16 @@ class FineViewController: UIViewController {
     
 
     override func viewDidAppear(animated: Bool) {
+        setNavigation()
+    }
+    
+    func setNavigation() {
+        let createFineButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "createFine")
+        self.tabBarController?.navigationItem.rightBarButtonItem = createFineButton
         self.tabBarController?.title = "Fines"
+    }
+    
+    func createFine() {
+        performSegueWithIdentifier("createFineSegue", sender: self)
     }
 }
