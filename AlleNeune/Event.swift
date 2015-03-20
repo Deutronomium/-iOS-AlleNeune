@@ -13,6 +13,7 @@ struct Event {
     
     //api parameters
     static let ROOT = "event"
+    static let ROOTS = "events"
     static let ID = "id"
     static let NAME = "name"
     static let CLUB_ID = "club_id"

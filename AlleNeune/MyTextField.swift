@@ -28,4 +28,16 @@ class MyTextField : UITextField, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    func error(placeholderText : String) {
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIHelper.myColor.CGColor
+        self.text = ""
+        self.placeholder = placeholderText
+    }
+    
+    func reset() {
+        self.layer.borderWidth = 0
+    }
+
 }

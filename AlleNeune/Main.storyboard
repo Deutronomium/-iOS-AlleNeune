@@ -162,7 +162,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Event Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8N-5R-wLL">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Event Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8N-5R-wLL" customClass="MyTextField" customModule="AlleNeune" customModuleProvider="target">
                                 <rect key="frame" x="16" y="80" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -193,7 +193,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="eventDateOutlet" destination="dsZ-q3-drj" id="Nt9-5S-2xe"/>
-                        <outlet property="eventName" destination="n8N-5R-wLL" id="CsG-Jn-GXf"/>
+                        <outlet property="eventName" destination="n8N-5R-wLL" id="tC5-SS-m4G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juC-xx-h3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>

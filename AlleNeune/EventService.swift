@@ -43,10 +43,10 @@ class EventService {
         return apiResponse
     }
     
-    func getEventsByClub(clubID : Int) -> [Event]? {
+    func getEventsByClub(clubID : Int) -> [Event] {
         var params : NSDictionary
         let url = Event.GET_BY_CLUB
-        var response : [Event]?
+        var response : [Event] = []
         
         params = [
             Event.ROOT : [
@@ -60,11 +60,14 @@ class EventService {
                     let statusCode = HTTPResponse.statusCode
                     if statusCode == 200 {
                         let json = JSON(data: postResponse.data as NSData)
-                        println(json)
-                        if let eventsDict = json[Event.ROOT + "s"].dictionary {
-                            
+                        let events: Array<JSON> = json[Event.ROOTS].arrayValue
+                        for event in events {
+                            let id = event[Event.ID].intValue
+                            let name = event[Event.NAME].stringValue
+                            let date = event[Event.DATE].stringValue
+                            let getEvent : Event = Event(id: id, name: name, date: date)
+                            response.append(getEvent)
                         }
-                        
                     }
                 }
             }

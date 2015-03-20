@@ -12,19 +12,24 @@ class CreateEventViewController: UIViewController {
 
     let eventService = EventService()
     
-    @IBOutlet weak var eventName: UITextField!
+    @IBOutlet weak var eventName: MyTextField!
     @IBOutlet weak var eventDateOutlet: UIDatePicker!
     
     @IBAction func createEventAction(sender: AnyObject) {
+        eventName.reset()
         var eventNameString = eventName.text
         var eventDate = eventDateOutlet.date
         
-        var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        println(dateFormatter.stringFromDate(eventDate))
-        
-        eventService.create(eventNameString, eventDate: dateFormatter.stringFromDate(eventDate), clubID: currentClub.id!)
-        navigationController?.popViewControllerAnimated(true)
+        if eventNameString.isEmpty {
+            eventName.error("Please enter an event name!")
+        } else {
+            var dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+            println(dateFormatter.stringFromDate(eventDate))
+            
+            eventService.create(eventNameString, eventDate: dateFormatter.stringFromDate(eventDate), clubID: currentClub.id!)
+            navigationController?.popViewControllerAnimated(true)
+        }
     }
     
     override func viewDidLoad() {
@@ -37,16 +42,4 @@ class CreateEventViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

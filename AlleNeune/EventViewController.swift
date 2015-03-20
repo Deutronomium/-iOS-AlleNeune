@@ -12,12 +12,12 @@ class EventViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var eventsTable: UITableView!
     let eventService = EventService()
-    var items : [Event] = [Event(id: 1, name: "FirstName", date: "FirstDate"), Event(id: 1, name: "SecondName", date: "SecondDate")]
+    var items : [Event] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        eventService.getEventsByClub(currentClub.id!)
-        
+        items = eventService.getEventsByClub(currentClub.id!)
+        eventsTable.rowHeight = 60
         setNavigation()
         eventsTable.registerNib(UINib(nibName: XIBNames.EVENT_CELL.rawValue, bundle: nil), forCellReuseIdentifier: CustomCellNames.EVENT_CELL.rawValue)
     }
@@ -33,6 +33,11 @@ class EventViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidAppear(animated: Bool) {
         setNavigation()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        items = eventService.getEventsByClub(currentClub.id!)
+        eventsTable.reloadData()
     }
     
     func setNavigation() {
@@ -54,7 +59,9 @@ class EventViewController: UIViewController, UITableViewDelegate {
         
         //cell.contentView.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth
         cell.eventNameLabel.text = event.name
-        cell.eventDateLabel.text = event.date
+        var date : String = event.date!
+        var dateArr = date.componentsSeparatedByString(".")
+        cell.eventDateLabel.text = dateArr[0]
         
         return cell
     }
