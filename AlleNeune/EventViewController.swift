@@ -57,7 +57,6 @@ class EventViewController: UIViewController, UITableViewDelegate {
         
         let event = items[indexPath.row]
         
-        //cell.contentView.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth
         cell.eventNameLabel.text = event.name
         var date : String = event.date!
         var dateArr = date.componentsSeparatedByString(".")

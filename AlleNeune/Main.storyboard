@@ -100,10 +100,27 @@
                     <view key="view" contentMode="scaleToFill" id="LnZ-20-uoh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Lpc-4z-fZf">
+                                <rect key="frame" x="0.0" y="40" width="600" height="511"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zBq-Eo-A07" id="rb3-Vm-XPH"/>
+                                    <outlet property="delegate" destination="zBq-Eo-A07" id="RSw-YA-3T5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qGd-c3-R69" firstAttribute="top" secondItem="Lpc-4z-fZf" secondAttribute="bottom" id="PaY-od-Jgc"/>
+                            <constraint firstItem="Lpc-4z-fZf" firstAttribute="top" secondItem="LnZ-20-uoh" secondAttribute="topMargin" constant="40" id="SqB-2F-Zzm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lpc-4z-fZf" secondAttribute="trailing" constant="-16" id="Xoi-KI-GDI"/>
+                            <constraint firstItem="Lpc-4z-fZf" firstAttribute="leading" secondItem="LnZ-20-uoh" secondAttribute="leadingMargin" constant="-16" id="cE5-Wm-yfE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Drinks" id="pZb-gi-C8d"/>
                     <connections>
+                        <outlet property="drinkTable" destination="Lpc-4z-fZf" id="DJf-e0-SUB"/>
                         <segue destination="mxK-uu-1sR" kind="show" identifier="createDrinkSegue" id="VVN-KA-Adz"/>
                     </connections>
                 </viewController>
@@ -114,7 +131,6 @@
         <!--Events-->
         <scene sceneID="dP5-IJ-T0T">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2IS-do-5wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qXD-2V-8Pa" customClass="EventViewController" customModule="AlleNeune" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AIL-bX-ISx"/>
@@ -147,6 +163,7 @@
                         <segue destination="oeu-Gn-fIh" kind="show" identifier="createEventSegue" id="Jmo-Yn-Nl6"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2IS-do-5wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5908" y="-169"/>
         </scene>

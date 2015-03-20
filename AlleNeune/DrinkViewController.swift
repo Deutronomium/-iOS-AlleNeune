@@ -8,11 +8,18 @@
 
 import UIKit
 
-class DrinkViewController: UIViewController {
+class DrinkViewController: UIViewController, UITableViewDelegate {
+
+    @IBOutlet weak var drinkTable: UITableView!
+    let drinkService = DrinkService()
+    var items : [Drink] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        items = drinkService.getByClub(currentClub.id!)
+        drinkTable.rowHeight = 60
         setNavigation()
+        drinkTable.registerNib(UINib(nibName: XIBNames.DRINK_CELL.rawValue, bundle: nil),forCellReuseIdentifier: CustomCellNames.DRINK_CELL.rawValue)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,4 +41,22 @@ class DrinkViewController: UIViewController {
     func createDrink() {
         performSegueWithIdentifier("createDrinkSegue", sender: self)
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return items.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(CustomCellNames.DRINK_CELL.rawValue, forIndexPath: indexPath) as DrinkTableViewCell
+        
+        let drink : Drink = items[indexPath.row]
+        
+        cell.nameLabel.text = drink.name
+        cell.priceLabel.text = String(drink.price!)
+        
+        return cell
+    }
+
+    
 }
