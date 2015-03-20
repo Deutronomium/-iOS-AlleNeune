@@ -22,13 +22,14 @@ class SessionService {
                 if let HTTPResponse = postResponse.response as? NSHTTPURLResponse {
                     let statusCode = HTTPResponse.statusCode
                     if statusCode == 200 {
-                        logInResponse = SessionLogin.SUCCESS
                         let json = JSON(data: postResponse.data as NSData)
                         if let userDict = json[User.ROOT].dictionary {
                             let id = userDict[User.ID]!.intValue
                             let userName = userDict[User.USER_NAME]!.stringValue
                             let phoneNumber = userDict[User.PHONE_NUMBER]!.stringValue
                             currentUser = User(id: id, userName: userName, phoneNumber: phoneNumber)
+                            logInResponse = SessionLogin.SUCCESS
+        
                         }
                     } else if statusCode == 460 {
                         logInResponse = SessionLogin.WRONG_EMAIL

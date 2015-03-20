@@ -16,12 +16,37 @@ class LoginController: MyViewController {
     var response = false;
     let userService = UserService()
     
-    @IBAction func loginAction(sender: AnyObject) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        let userService = UserService()
+        var loginResponse = login()
+        if identifier == "clubHomeSegue" {
+            if loginResponse {
+                userService.userHasClub(currentUser.userName!)
+                return true
+            }
+        } else if identifier == "signUpSegue" {
+            return true
+        }
+        
+        return false
+    }
+    
+    func login() -> Bool {
         UIHelper.resetBorder(emailTextField, passwordTextField)
         let sessionService = SessionService()
         let email = emailTextField.text
         let password = passwordTextField.text
-        let logInResponse = sessionService.logIn(email, password: password)
+        var cont = false
+        
         if email.isEmpty {
             UIHelper.changeTextFieldColor(emailTextField, placeholderText: NSLocalizedString("ENTER_EMAIL", comment: "Enter email"))
         }
@@ -30,15 +55,11 @@ class LoginController: MyViewController {
         }
         
         if !email.isEmpty && !password.isEmpty {
+            let logInResponse = sessionService.logIn(email, password: password)
+            println(logInResponse)
             switch logInResponse {
             case .SUCCESS:
-                if userService.userHasClub(currentUser.userName!) {
-                    let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-                    appDelegate.window?.rootViewController = appDelegate.clubHomeController
-                } else {
-                    let userHomeViewController = UserHomeController(nibName: XIBNames.USER_HOME_CONTROLLER.rawValue, bundle: nil)
-                    navigationController?.pushViewController(userHomeViewController, animated: true)
-                }
+                cont = true
                 break
             case .WRONG_EMAIL:
                 UIHelper.changeTextFieldColor(emailTextField, placeholderText: NSLocalizedString("WRONG_EMAIL", comment: "User entered a wrong email!"))
@@ -51,26 +72,9 @@ class LoginController: MyViewController {
                 //TODO: Some error handling!
             }
         }
-
+        
+        return cont
     }
     
-    @IBAction func signUpAction(sender: AnyObject) {
-        let vc = SignUpController(nibName: XIBNames.SIGN_UP_CONTROLLER.rawValue, bundle: nil)
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationController?.navigationBarHidden = true
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        navigationController?.navigationBarHidden = true
-    }
 }
 

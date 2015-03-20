@@ -2,13 +2,13 @@
 //  EventViewController.swift
 //  AlleNeune
 //
-//  Created by Patrick Engelkes on 10/03/15.
+//  Created by Patrick Engelkes on 19/03/15.
 //  Copyright (c) 2015 Patrick Engelkes. All rights reserved.
 //
 
 import UIKit
 
-class EventViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EventViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var eventsTable: UITableView!
     let eventService = EventService()
@@ -16,17 +16,9 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        eventsTable.delegate = self
-        eventsTable.dataSource = self
-        
+        eventService.getEventsByClub(currentClub.id!)
+        self.tabBarController?.title = "Events"
         eventsTable.registerNib(UINib(nibName: XIBNames.EVENT_CELL.rawValue, bundle: nil), forCellReuseIdentifier: CustomCellNames.EVENT_CELL.rawValue)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        var events = eventService.getEventsByClub(currentClub.id!)
-        eventsTable.delegate? = self
-        eventsTable.dataSource? = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +26,10 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.tabBarController?.title = "Events"
+    }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return items.count;

@@ -2,7 +2,7 @@
 //  DrinkViewController.swift
 //  AlleNeune
 //
-//  Created by Patrick Engelkes on 11/03/15.
+//  Created by Patrick Engelkes on 20/03/15.
 //  Copyright (c) 2015 Patrick Engelkes. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ class DrinkViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tabBarController?.title = "Drinks"
         // Do any additional setup after loading the view.
     }
 
@@ -22,14 +22,7 @@ class DrinkViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(animated: Bool) {
+        self.tabBarController?.title = "Drinks"
     }
-    */
-
 }

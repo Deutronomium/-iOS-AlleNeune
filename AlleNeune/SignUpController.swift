@@ -9,20 +9,52 @@
 import UIKit
 
 class SignUpController: MyViewController {
+
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
 
+    let userService = UserService()
     @IBAction func continueAction(sender: AnyObject) {
-        UIHelper.resetBorder(userNameTextField, emailTextField, passwordTextField, confirmPasswordTextField)
         
-        let userService = UserService()
+    }
+    @IBOutlet weak var signUpButton: UIBarButtonItem!
+
+    
+    @IBAction func backAction(sender: AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //navigationController?.navigationBarHidden = true
+     
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if identifier == "phoneNumberSegue" {
+            if continueToPhoneNumber() {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    func continueToPhoneNumber()  -> Bool {
+        UIHelper.resetBorder(userNameTextField, emailTextField, passwordTextField, confirmPasswordTextField)
         
         let userName : String = userNameTextField.text
         let email : String = emailTextField.text
         let password :String = passwordTextField.text
         let confirmPassword : String = confirmPasswordTextField.text
+        var cont = false
         
         if userName.isEmpty {
             UIHelper.changeTextFieldColor(userNameTextField, placeholderText: NSLocalizedString("ENTER_USERNAME", comment: "Enter Username"))
@@ -45,12 +77,11 @@ class SignUpController: MyViewController {
                 let userValidity = userService.checkValidity(userName, email: email, password: password, passwordConfirmation: confirmPassword, phoneNumber: "")
                 switch userValidity {
                 case .VALID :
-                    let phoneNumberViewController = PhoneNumberController(nibName: XIBNames.PHONE_NUMBER_CONTROLLER.rawValue, bundle: nil)
-                    phoneNumberViewController.userName = userName
-                    phoneNumberViewController.email = email
-                    phoneNumberViewController.password = password
-                    phoneNumberViewController.confirmPassword = confirmPassword
-                    navigationController?.pushViewController(phoneNumberViewController, animated: true)
+                    //phoneNumberViewController.userName = userName
+                    //phoneNumberViewController.email = email
+                    //phoneNumberViewController.password = password
+                    //phoneNumberViewController.confirmPassword = confirmPassword
+                    cont = true
                 case .NAME_AND_EMAIL_USED:
                     UIHelper.changeTextFieldColor(userNameTextField, placeholderText: NSLocalizedString("USERNAME_ALREADY_USED", comment: "Username is already in use!"))
                     UIHelper.changeTextFieldColor(emailTextField, placeholderText: NSLocalizedString("EMAIL_ALREADY_USED", comment: "Email is already in use!"))
@@ -64,20 +95,7 @@ class SignUpController: MyViewController {
                 UIHelper.changeTextFieldColor(confirmPasswordTextField, placeholderText: NSLocalizedString("PASSWORDS_DO_NOT_MATCH", comment: "Passwords do not match"))
             }
         }
-    }
-    
-    @IBAction func backAction(sender: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationController?.navigationBarHidden = true
-     
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        return cont
     }
 }
