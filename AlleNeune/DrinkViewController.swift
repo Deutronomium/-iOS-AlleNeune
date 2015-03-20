@@ -57,6 +57,4 @@ class DrinkViewController: UIViewController, UITableViewDelegate {
         
         return cell
     }
-
-    
 }

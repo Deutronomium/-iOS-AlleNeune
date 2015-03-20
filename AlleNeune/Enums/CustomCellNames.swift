@@ -10,5 +10,6 @@ import Foundation
 
 enum CustomCellNames : String {
     case EVENT_CELL = "eventCell",
-        DRINK_CELL = "drinkCell"
+        DRINK_CELL = "drinkCell",
+        FINE_CELL = "fineCell"
 }

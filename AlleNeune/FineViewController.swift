@@ -10,16 +10,21 @@ import UIKit
 
 class FineViewController: UIViewController {
 
+    @IBOutlet weak var fineTable: UITableView!
+    let fineService = FineService()
+    var items : [Fine] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        items = fineService.getByClub(currentClub.id!)
+        fineTable.rowHeight = 60
         setNavigation()
+        fineTable.registerNib(UINib(nibName: XIBNames.FINE_CELL.rawValue, bundle: nil), forCellReuseIdentifier: CustomCellNames.FINE_CELL.rawValue)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
 
     override func viewDidAppear(animated: Bool) {
         setNavigation()
@@ -34,4 +39,21 @@ class FineViewController: UIViewController {
     func createFine() {
         performSegueWithIdentifier("createFineSegue", sender: self)
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return items.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(CustomCellNames.FINE_CELL.rawValue, forIndexPath: indexPath) as FineTableViewCell
+        
+        let fine : Fine = items[indexPath.row]
+        
+        cell.nameLabel.text = fine.name
+        cell.amountLabel.text = String(fine.amount!)
+        
+        return cell
+    }
+    
 }

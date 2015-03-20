@@ -267,10 +267,27 @@
                     <view key="view" contentMode="scaleToFill" id="2Sh-sN-Zt2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RJB-5I-AE7">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vBu-9t-x8j" id="EnM-1G-2IC"/>
+                                    <outlet property="delegate" destination="vBu-9t-x8j" id="ve4-a8-QyE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RJB-5I-AE7" firstAttribute="top" secondItem="Exs-Lu-1Rn" secondAttribute="bottom" id="00P-2e-35l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RJB-5I-AE7" secondAttribute="trailing" constant="-16" id="6Mz-fH-Bfn"/>
+                            <constraint firstItem="RJB-5I-AE7" firstAttribute="leading" secondItem="2Sh-sN-Zt2" secondAttribute="leadingMargin" constant="-16" id="RFX-w7-YIe"/>
+                            <constraint firstItem="5MB-xB-vFy" firstAttribute="top" secondItem="RJB-5I-AE7" secondAttribute="bottom" id="Xc9-00-IsY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Fines" id="Zwd-9N-br3"/>
                     <connections>
+                        <outlet property="fineTable" destination="RJB-5I-AE7" id="ozm-LO-BeZ"/>
                         <segue destination="c90-B3-HmG" kind="show" identifier="createFineSegue" id="AfH-x1-bSi"/>
                     </connections>
                 </viewController>

@@ -6,8 +6,14 @@
 import Foundation
 
 struct Fine {
+    //attributes
+    var id : Int?
+    var name : String?
+    var amount : Int?
+    
     //api parameters
     static let ROOT = "fine"
+    static let ROOTS = "fines"
     static let ID = "id"
     static let NAME = "name"
     static let AMOUNT = "amount"
@@ -17,4 +23,11 @@ struct Fine {
     static let GENERIC_URL = "/fines"
     static let GET_BY_CLUB : String = Fine.GENERIC_URL + "/get_by_club"
     static let UPDATE : String = Fine.GENERIC_URL + "/"
+    
+    init(id: Int, name: String, amount: Int) {
+        self.id = id
+        self.name = name
+        self.amount = amount
+    }
+    
 }
