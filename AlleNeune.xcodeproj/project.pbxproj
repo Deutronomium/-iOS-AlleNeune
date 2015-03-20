@@ -31,6 +31,7 @@
 		99495F4B1ABB304E001A4744 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99495F4A1ABB304E001A4744 /* EventViewController.swift */; };
 		99495F4D1ABBECC3001A4744 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99495F4C1ABBECC3001A4744 /* DrinkViewController.swift */; };
 		99495F4F1ABBECCF001A4744 /* FineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99495F4E1ABBECCF001A4744 /* FineViewController.swift */; };
+		99495F511ABBFC5D001A4744 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99495F501ABBFC5D001A4744 /* CreateEventViewController.swift */; };
 		998546261AA6640100E56612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998546251AA6640100E56612 /* AppDelegate.swift */; };
 		9985462D1AA6640100E56612 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9985462C1AA6640100E56612 /* Images.xcassets */; };
 		998546301AA6640100E56612 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9985462E1AA6640100E56612 /* LaunchScreen.xib */; };
@@ -86,6 +87,7 @@
 		99495F4A1ABB304E001A4744 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		99495F4C1ABBECC3001A4744 /* DrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
 		99495F4E1ABBECCF001A4744 /* FineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FineViewController.swift; sourceTree = "<group>"; };
+		99495F501ABBFC5D001A4744 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		998546201AA6640100E56612 /* AlleNeune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlleNeune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		998546241AA6640100E56612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		998546251AA6640100E56612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				9985688F1AAA185E002905F2 /* PhoneNumberController.swift */,
 				99495F4A1ABB304E001A4744 /* EventViewController.swift */,
 				9908C6371AAFA5BF007F8679 /* LoginController.swift */,
+				99495F501ABBFC5D001A4744 /* CreateEventViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				9908C6621AB02EA5007F8679 /* ApiCall.swift in Sources */,
 				549A384E3B8DF793B73C791F /* UserValidity.swift in Sources */,
 				99495F4B1ABB304E001A4744 /* EventViewController.swift in Sources */,
+				99495F511ABBFC5D001A4744 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

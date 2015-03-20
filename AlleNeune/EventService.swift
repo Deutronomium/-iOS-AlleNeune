@@ -10,7 +10,7 @@ import Foundation
 
 class EventService {
     
-    func create(eventName: String, eventDate: String, clubID: Int) -> Event {
+    func create(eventName: String, eventDate: String, clubID: Int) -> Event? {
         var params : NSDictionary
         let url = Event.GENERIC_URL
         var apiResponse : Event?
@@ -29,14 +29,18 @@ class EventService {
                     let statusCode = HTTPResponse.statusCode
                     if statusCode == 201 {
                         let json = JSON(data: postResponse.data as NSData)
-                        println(json)
-                        
+                        if let eventDict = json[Event.ROOT].dictionary {
+                            let id = eventDict[Event.ID]!.intValue
+                            let name = eventDict[Event.NAME]!.stringValue
+                            let date = eventDict[Event.DATE]!.stringValue
+                            apiResponse = Event(id: id, name: name, date: date)
+                        }
                     }
                 }
             }
         }
         
-        return apiResponse!
+        return apiResponse
     }
     
     func getEventsByClub(clubID : Int) -> [Event]? {

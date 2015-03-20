@@ -153,7 +153,7 @@
         <!--Create Event-->
         <scene sceneID="COQ-YK-LeJ">
             <objects>
-                <viewController id="oeu-Gn-fIh" sceneMemberID="viewController">
+                <viewController id="oeu-Gn-fIh" customClass="CreateEventViewController" customModule="AlleNeune" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hfU-ag-dBc"/>
                         <viewControllerLayoutGuide type="bottom" id="nib-me-oE8"/>
@@ -161,9 +161,40 @@
                     <view key="view" contentMode="scaleToFill" id="Cie-ru-Cvo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Event Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n8N-5R-wLL">
+                                <rect key="frame" x="16" y="80" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dsZ-q3-drj">
+                                <rect key="frame" x="0.0" y="150" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="448525431.815813">
+                                    <!--2015-03-20 06:23:51 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n8N-5R-wLL" firstAttribute="top" secondItem="hfU-ag-dBc" secondAttribute="bottom" constant="16" id="5cf-Kq-lZB"/>
+                            <constraint firstItem="n8N-5R-wLL" firstAttribute="leading" secondItem="Cie-ru-Cvo" secondAttribute="leadingMargin" id="8vW-eJ-YyU"/>
+                            <constraint firstItem="dsZ-q3-drj" firstAttribute="leading" secondItem="Cie-ru-Cvo" secondAttribute="leadingMargin" constant="-16" id="Zak-U2-6nq"/>
+                            <constraint firstItem="dsZ-q3-drj" firstAttribute="top" secondItem="n8N-5R-wLL" secondAttribute="bottom" constant="40" id="cHT-qc-3Sz"/>
+                            <constraint firstItem="n8N-5R-wLL" firstAttribute="trailing" secondItem="Cie-ru-Cvo" secondAttribute="trailingMargin" id="p18-JV-LPO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dsZ-q3-drj" secondAttribute="trailing" constant="-16" id="qhq-Xa-zrL"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Create Event" id="Z6c-78-pYA"/>
+                    <navigationItem key="navigationItem" title="Create Event" id="Z6c-78-pYA">
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="iD2-m4-iRq">
+                            <connections>
+                                <action selector="createEventAction:" destination="oeu-Gn-fIh" id="AHv-5V-AR6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="eventDateOutlet" destination="dsZ-q3-drj" id="Nt9-5S-2xe"/>
+                        <outlet property="eventName" destination="n8N-5R-wLL" id="CsG-Jn-GXf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juC-xx-h3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
