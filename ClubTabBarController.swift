@@ -22,7 +22,7 @@ class ClubTabBarController: UITabBarController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.navigationItem.hidesBackButton = true
+        //self.navigationItem.hidesBackButton = true
     }
     
 

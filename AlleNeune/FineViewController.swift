@@ -10,36 +10,34 @@ import UIKit
 
 class FineViewController: UIViewController {
 
+    //Outlets
+    //-----------------------------------------------------------------
     @IBOutlet weak var fineTable: UITableView!
     let fineService = FineService()
     var items : [Fine] = []
     
+    //Actions
+    //-----------------------------------------------------------------
+    @IBAction func createFineAction(sender: AnyObject) {
+        performSegueWithIdentifier("createFineSegue", sender: self)
+    }
+    
+    //View Functions
+    //-----------------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
         items = fineService.getByClub(currentClub.id!)
         fineTable.rowHeight = 60
-        setNavigation()
+        //setNavigation()
         fineTable.registerNib(UINib(nibName: XIBNames.FINE_CELL.rawValue, bundle: nil), forCellReuseIdentifier: CustomCellNames.FINE_CELL.rawValue)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    override func viewDidAppear(animated: Bool) {
-        setNavigation()
-    }
     
-    func setNavigation() {
-        let createFineButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "createFine")
-        self.tabBarController?.navigationItem.rightBarButtonItem = createFineButton
-        self.tabBarController?.title = "Fines"
-    }
-    
-    func createFine() {
-        performSegueWithIdentifier("createFineSegue", sender: self)
-    }
-    
+    //Table Functions
+    //-----------------------------------------------------------------
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return items.count;

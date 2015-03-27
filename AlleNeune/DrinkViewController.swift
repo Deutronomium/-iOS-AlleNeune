@@ -10,15 +10,26 @@ import UIKit
 
 class DrinkViewController: UIViewController, UITableViewDelegate {
 
+    //Outlets
+    //-----------------------------------------------------------------
     @IBOutlet weak var drinkTable: UITableView!
     let drinkService = DrinkService()
     var items : [Drink] = []
 
+    //Actions
+    //-----------------------------------------------------------------
+    @IBAction func createDrinkAction(sender: AnyObject) {
+        performSegueWithIdentifier("createDrinkSegue", sender: self)
+    }
+    
+    //View functions
+    //-----------------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
         items = drinkService.getByClub(currentClub.id!)
         drinkTable.rowHeight = 60
-        setNavigation()
+        self.navigationController?.navigationBarHidden = false
+        //setNavigation()
         drinkTable.registerNib(UINib(nibName: XIBNames.DRINK_CELL.rawValue, bundle: nil),forCellReuseIdentifier: CustomCellNames.DRINK_CELL.rawValue)
     }
 
@@ -27,21 +38,13 @@ class DrinkViewController: UIViewController, UITableViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
-    override func viewDidAppear(animated: Bool) {
-        setNavigation()
+    override func viewWillAppear(animated: Bool) {
+        items = drinkService.getByClub(currentClub.id!)
+        drinkTable.reloadData()
     }
     
-    func setNavigation() {
-        let createDrinkButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "createDrink")
-        self.tabBarController?.title = "Drinks"
-        self.tabBarController?.navigationItem.rightBarButtonItem = createDrinkButton
-    }
-    
-    func createDrink() {
-        performSegueWithIdentifier("createDrinkSegue", sender: self)
-    }
-    
+    //Table functions
+    //-----------------------------------------------------------------
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return items.count;

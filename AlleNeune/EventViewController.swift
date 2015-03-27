@@ -10,29 +10,32 @@ import UIKit
 
 class EventViewController: UIViewController, UITableViewDelegate {
 
+    //Outlets
+    //-----------------------------------------------------------------
     @IBOutlet weak var eventsTable: UITableView!
     let eventService = EventService()
     var items : [Event] = []
+
+    //Actions
+    //-----------------------------------------------------------------
+    @IBAction func createEventAction(sender: AnyObject) {
+        performSegueWithIdentifier("createEventSegue", sender: self)
+    }
     
+    //View functions
+    //-----------------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
         items = eventService.getEventsByClub(currentClub.id!)
         eventsTable.rowHeight = 60
-        setNavigation()
+        self.navigationController?.navigationBarHidden = false
+        //setNavigation()
         eventsTable.registerNib(UINib(nibName: XIBNames.EVENT_CELL.rawValue, bundle: nil), forCellReuseIdentifier: CustomCellNames.EVENT_CELL.rawValue)
     }
     
-    func createEvent() {
-        performSegueWithIdentifier("createEventSegue", sender: self)
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        setNavigation()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -40,12 +43,9 @@ class EventViewController: UIViewController, UITableViewDelegate {
         eventsTable.reloadData()
     }
     
-    func setNavigation() {
-        let createEventBarButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "createEvent")
-        self.tabBarController?.title = "Events"
-        self.tabBarController?.navigationItem.rightBarButtonItem = createEventBarButton
-    }
-
+    
+    //Table functions
+    //-----------------------------------------------------------------
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return items.count;

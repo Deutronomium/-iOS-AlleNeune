@@ -15,7 +15,6 @@ class ApiPostHandler {
     func apiPost(params : NSDictionary, url : String, postCompleted : (succeeded:
         Bool, postResponse: PostResponse) ->()) {
         var url = HOST + url
-        println(url)
         var request = NSMutableURLRequest(URL: NSURL(string: url)!)
         var session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
