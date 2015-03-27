@@ -9,12 +9,17 @@
 import UIKit
 
 class CreateEventViewController: UIViewController {
-
+    //Defines
+    //-----------------------------------------------------------------
     let eventService = EventService()
     
+    //Outlets
+    //-----------------------------------------------------------------
     @IBOutlet weak var eventName: MyTextField!
     @IBOutlet weak var eventDateOutlet: UIDatePicker!
     
+    //Actions
+    //-----------------------------------------------------------------
     @IBAction func createEventAction(sender: AnyObject) {
         eventName.reset()
         var eventNameString = eventName.text
@@ -32,6 +37,8 @@ class CreateEventViewController: UIViewController {
         }
     }
     
+    //View Functions
+    //-----------------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
 

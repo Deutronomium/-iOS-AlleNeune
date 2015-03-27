@@ -1,42 +1,43 @@
 //
-//  CreateDrinkViewController.swift
+//  CreateFineViewController.swift
 //  AlleNeune
 //
-//  Created by Patrick Engelkes on 24/03/15.
+//  Created by Patrick Engelkes on 27/03/15.
 //  Copyright (c) 2015 Patrick Engelkes. All rights reserved.
 //
 
 import UIKit
 
-class CreateDrinkViewController: UIViewController {
+class CreateFineViewController: UIViewController {
     //Defines
     //-----------------------------------------------------------------
-    let drinkService = DrinkService()
+    let fineService = FineService()
 
     //Outlets
     //-----------------------------------------------------------------
-    @IBOutlet weak var drinkNameTextField: MyTextField!
-    @IBOutlet weak var drinkPriceTextField: MyTextField!
+    @IBOutlet weak var fineAmountTextField: MyTextField!
+    @IBOutlet weak var fineNameTextField: MyTextField!
     
     //Actions
     //-----------------------------------------------------------------
-    @IBAction func createDrinkAction(sender: AnyObject) {
-        drinkNameTextField.reset()
-        drinkPriceTextField.reset()
+    @IBAction func createFineAction(sender: AnyObject) {
+        fineNameTextField.reset()
+        fineAmountTextField.reset()
         
-        var drinkName = drinkNameTextField.text
-        var drinkPrice = drinkPriceTextField.text
+        var fineName = fineNameTextField.text
+        var fineAmount = fineAmountTextField.text
         
-        if drinkName.isEmpty {
-            drinkNameTextField.error("Please enter a drink name!")
+        if fineAmount.isEmpty {
+            fineAmountTextField.error("Please enter a fine amount!")
         }
-        if drinkPrice.isEmpty {
-            drinkPriceTextField.error("Please enter a drink price!")
+        if fineName.isEmpty {
+            fineNameTextField.error("Please enter a fine name!")
         }
-        if !drinkName.isEmpty && !drinkPrice.isEmpty {
-            drinkService.create(drinkName, drinkPrice: drinkPrice, clubID: currentClub.id!)
+        if !fineName.isEmpty && !fineAmount.isEmpty {
+            fineService.create(fineName, fineAmount: fineAmount, clubID: currentClub.id!)
             navigationController?.popViewControllerAnimated(true)
         }
+        
     }
     
     //View Functions

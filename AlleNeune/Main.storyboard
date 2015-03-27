@@ -354,7 +354,7 @@
         <!--Create Fine-->
         <scene sceneID="k3j-Od-0m3">
             <objects>
-                <viewController id="c90-B3-HmG" sceneMemberID="viewController">
+                <viewController id="c90-B3-HmG" customClass="CreateFineViewController" customModule="AlleNeune" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ux7-2J-3wo"/>
                         <viewControllerLayoutGuide type="bottom" id="MYY-WD-snh"/>
@@ -363,7 +363,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Fine amount" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uM6-aC-n79">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Fine amount" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uM6-aC-n79" customClass="MyTextField" customModule="AlleNeune" customModuleProvider="target">
                                 <rect key="frame" x="16" y="130" width="550" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -374,7 +374,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Fine name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rn5-y7-dBl">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Fine name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rn5-y7-dBl" customClass="MyTextField" customModule="AlleNeune" customModuleProvider="target">
                                 <rect key="frame" x="16" y="80" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -393,8 +393,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Fine" id="1fo-vX-GZx">
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="IWo-Ij-c9z"/>
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="IWo-Ij-c9z">
+                            <connections>
+                                <action selector="createFineAction:" destination="c90-B3-HmG" id="t9b-gb-IiB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="fineAmountTextField" destination="uM6-aC-n79" id="prk-5p-BgU"/>
+                        <outlet property="fineNameTextField" destination="rn5-y7-dBl" id="ea2-7R-eFL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofW-Su-Qit" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -583,6 +591,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tMS-5O-i06"/>
+        <segue reference="gov-iC-Ge2"/>
     </inferredMetricsTieBreakers>
 </document>

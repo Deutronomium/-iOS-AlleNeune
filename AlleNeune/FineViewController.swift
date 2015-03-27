@@ -36,6 +36,11 @@ class FineViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        items = fineService.getByClub(currentClub.id!)
+        fineTable.reloadData()
+    }
+    
     //Table Functions
     //-----------------------------------------------------------------
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
