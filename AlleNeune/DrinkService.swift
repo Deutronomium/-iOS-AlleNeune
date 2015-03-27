@@ -31,7 +31,7 @@ class DrinkService {
                         for drink in drinks {
                             let id = drink[Drink.ID].intValue
                             let name = drink[Drink.NAME].stringValue
-                            let price = drink[Drink.PRICE].intValue
+                            let price = drink[Drink.PRICE].doubleValue
                             let getDrink : Drink = Drink(id: id, name: name, price: price)
                             response.append(getDrink)
                         }
@@ -65,7 +65,7 @@ class DrinkService {
                         if let drinkDict = json[Drink.ROOT].dictionary {
                             let id = drinkDict[Drink.ID]!.intValue
                             let name = drinkDict[Drink.NAME]!.stringValue
-                            let price = drinkDict[Drink.PRICE]!.intValue
+                            let price = drinkDict[Drink.PRICE]!.doubleValue
                             apiResponse = Drink(id: id, name: name, price: price)
                         }
                     }

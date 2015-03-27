@@ -9,7 +9,7 @@ struct Drink {
     //attributes
     var id : Int?
     var name : String?
-    var price : Int?
+    var price : Double?
     
     //api parameters
     static let ROOT : String = "drink"
@@ -24,7 +24,7 @@ struct Drink {
     static let GET_BY_CLUB : String = Drink.GENERIC_URL + "/get_by_club"
     static let UPDATE : String = Drink.GENERIC_URL + "/"
     
-    init(id: Int, name: String, price: Int) {
+    init(id: Int, name: String, price: Double) {
         self.id = id
         self.name = name
         self.price = price

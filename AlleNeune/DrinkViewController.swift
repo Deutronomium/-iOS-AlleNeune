@@ -56,7 +56,7 @@ class DrinkViewController: UIViewController, UITableViewDelegate {
         let drink : Drink = items[indexPath.row]
         
         cell.nameLabel.text = drink.name
-        cell.priceLabel.text = String(drink.price!)
+        cell.priceLabel.text = String(format:"%.2f", drink.price!)
         
         return cell
     }

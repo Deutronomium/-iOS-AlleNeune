@@ -54,7 +54,7 @@ class FineViewController: UIViewController {
         let fine : Fine = items[indexPath.row]
         
         cell.nameLabel.text = fine.name
-        cell.amountLabel.text = String(fine.amount!)
+        cell.amountLabel.text = String(format:"%.2f", fine.amount!)
         
         return cell
     }

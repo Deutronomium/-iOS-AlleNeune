@@ -31,7 +31,7 @@ class FineService {
                         for fine in fines {
                             let id = fine[Fine.ID].intValue
                             let name = fine[Fine.NAME].stringValue
-                            let amount = fine[Fine.AMOUNT].intValue
+                            let amount = fine[Fine.AMOUNT].doubleValue
                             let getFine : Fine = Fine(id: id, name: name, amount: amount)
                             response.append(getFine)
                         }
@@ -65,7 +65,7 @@ class FineService {
                         if let fineDict = json[Fine.ROOT].dictionary {
                             let id = fineDict[Fine.ID]!.intValue
                             let name = fineDict[Fine.NAME]!.stringValue
-                            let amount = fineDict[Fine.AMOUNT]!.intValue
+                            let amount = fineDict[Fine.AMOUNT]!.doubleValue
                             apiResponse = Fine(id: id, name: name, amount: amount)
                         }
                     }
