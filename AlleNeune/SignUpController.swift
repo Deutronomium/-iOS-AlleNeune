@@ -10,10 +10,10 @@ import UIKit
 
 class SignUpController: MyViewController {
 
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var userNameTextField: MyTextField!
+    @IBOutlet weak var emailTextField: MyTextField!
+    @IBOutlet weak var passwordTextField: MyTextField!
+    @IBOutlet weak var confirmPasswordTextField: MyTextField!
 
     let userService = UserService()
     @IBAction func continueAction(sender: AnyObject) {
@@ -48,7 +48,10 @@ class SignUpController: MyViewController {
     }
     
     func continueToPhoneNumber()  -> Bool {
-        UIHelper.resetBorder(userNameTextField, emailTextField, passwordTextField, confirmPasswordTextField)
+        userNameTextField.reset()
+        emailTextField.reset()
+        passwordTextField.reset()
+        confirmPasswordTextField.reset()
         
         let userName : String = userNameTextField.text
         let email : String = emailTextField.text
@@ -57,19 +60,19 @@ class SignUpController: MyViewController {
         var cont = false
         
         if userName.isEmpty {
-            UIHelper.changeTextFieldColor(userNameTextField, placeholderText: NSLocalizedString("ENTER_USERNAME", comment: "Enter Username"))
+            userNameTextField.error(NSLocalizedString("ENTER_USERNAME", comment: "Enter Username"))
         }
         
         if email.isEmpty {
-            UIHelper.changeTextFieldColor(emailTextField, placeholderText: NSLocalizedString("ENTER_EMAIL", comment: "Enter email"))
+            emailTextField.error(NSLocalizedString("ENTER_EMAIL", comment: "Enter email"))
         }
         
         if password.isEmpty {
-            UIHelper.changeTextFieldColor(passwordTextField, placeholderText: NSLocalizedString("ENTER_PASSWORD", comment: "Enter password"))
+            passwordTextField.error(NSLocalizedString("ENTER_PASSWORD", comment: "Enter password"))
         }
         
-        if password.isEmpty {
-            UIHelper.changeTextFieldColor(confirmPasswordTextField, placeholderText: NSLocalizedString("ENTER_CONFIRM_PASSWORD", comment: "Enter confirmation password"))
+        if confirmPassword.isEmpty {
+            confirmPasswordTextField.error(NSLocalizedString("ENTER_CONFIRM_PASSWORD", comment: "Enter confirmation password"))
         }
         
         if !userName.isEmpty && !email.isEmpty && !password.isEmpty && !confirmPassword.isEmpty {

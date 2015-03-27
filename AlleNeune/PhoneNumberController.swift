@@ -16,14 +16,19 @@ class PhoneNumberController: MyViewController {
     var confirmPassword : String = ""
 
     
-    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: MyTextField!
     
     @IBAction func finishUserAction(sender: AnyObject) {
         let phoneNumber = phoneNumberTextField.text
+        if phoneNumber.isEmpty {
+            phoneNumberTextField.error("Please enter a phone number")
+        }
         
-        if userService.createUser(userName, email: email, phoneNumber: phoneNumber, password: password, confirmPassword: confirmPassword) {
-            let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-            appDelegate.window?.rootViewController = appDelegate.clubHomeController
+        if !phoneNumber.isEmpty {
+            if userService.createUser(userName, email: email, phoneNumber: phoneNumber, password: password, confirmPassword: confirmPassword) {
+                let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+                appDelegate.window?.rootViewController = appDelegate.clubHomeController
+            }
         }
     }
     

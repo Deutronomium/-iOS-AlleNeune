@@ -10,8 +10,8 @@ import UIKit
 
 class LoginController: MyViewController {
     
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: MyTextField!
+    @IBOutlet weak var passwordTextField: MyTextField!
     
     var response = false;
     let userService = UserService()
@@ -41,17 +41,18 @@ class LoginController: MyViewController {
     }
     
     func login() -> Bool {
-        UIHelper.resetBorder(emailTextField, passwordTextField)
+        emailTextField.reset()
+        passwordTextField.reset()
         let sessionService = SessionService()
         let email = emailTextField.text
         let password = passwordTextField.text
         var cont = false
         
         if email.isEmpty {
-            UIHelper.changeTextFieldColor(emailTextField, placeholderText: NSLocalizedString("ENTER_EMAIL", comment: "Enter email"))
+            emailTextField.error(NSLocalizedString("ENTER_EMAIL", comment: "Enter email"))
         }
         if password.isEmpty {
-            UIHelper.changeTextFieldColor(passwordTextField, placeholderText: NSLocalizedString("ENTER_PASSWORD", comment: "Enter password"))
+            passwordTextField.error(NSLocalizedString("ENTER_PASSWORD", comment: "Enter password"))
         }
         
         if !email.isEmpty && !password.isEmpty {
