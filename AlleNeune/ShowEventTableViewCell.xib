@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="showEventViewCell" id="KGk-i7-Jjw" customClass="ShowEventTableViewCell" customModule="AlleNeune" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBL-c9-5AZ">
+                        <rect key="frame" x="8" y="11" width="82" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKe-8G-I5l">
+                        <rect key="frame" x="212" y="1" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Jey-31-UGH"/>
+                            <constraint firstAttribute="height" constant="40" id="h2n-5d-hDj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                        <state key="normal" title="Button" image="drink_icon.png" backgroundImage="drink_icon.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="addDrinkAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bMh-OB-Y4z"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGh-2W-egQ">
+                        <rect key="frame" x="272" y="1" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="4l5-hP-oB9"/>
+                            <constraint firstAttribute="width" constant="40" id="vkC-K5-GoU"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="fine_icon.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="addFineAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jEb-rs-xed"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CGh-2W-egQ" firstAttribute="leading" secondItem="TKe-8G-I5l" secondAttribute="trailing" constant="20" id="EvZ-6A-LTe"/>
+                    <constraint firstItem="CGh-2W-egQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FeU-z9-Xd5"/>
+                    <constraint firstAttribute="centerY" secondItem="TBL-c9-5AZ" secondAttribute="centerY" id="HvX-NE-pil"/>
+                    <constraint firstItem="TBL-c9-5AZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="NT9-b6-OHz"/>
+                    <constraint firstItem="CGh-2W-egQ" firstAttribute="top" secondItem="TKe-8G-I5l" secondAttribute="top" id="QbQ-QN-LwB"/>
+                    <constraint firstItem="CGh-2W-egQ" firstAttribute="centerY" secondItem="TBL-c9-5AZ" secondAttribute="centerY" id="XWY-GC-CRQ"/>
+                    <constraint firstItem="CGh-2W-egQ" firstAttribute="leading" secondItem="TKe-8G-I5l" secondAttribute="trailing" constant="20" id="bKO-i4-qnZ"/>
+                    <constraint firstItem="CGh-2W-egQ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="f53-Ck-a5J"/>
+                    <constraint firstItem="CGh-2W-egQ" firstAttribute="bottom" secondItem="TKe-8G-I5l" secondAttribute="bottom" id="uw4-Ie-MGn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="userNameLabel" destination="TBL-c9-5AZ" id="UhI-48-Aef"/>
+            </connections>
+            <point key="canvasLocation" x="673" y="354"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="drink_icon.png" width="512" height="512"/>
+        <image name="fine_icon.png" width="512" height="512"/>
+    </resources>
+</document>

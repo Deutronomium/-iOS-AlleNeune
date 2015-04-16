@@ -13,8 +13,12 @@ class EventViewController: UIViewController, UITableViewDelegate {
     //Outlets
     //-----------------------------------------------------------------
     @IBOutlet weak var eventsTable: UITableView!
+
+    //Variables and Constants
+    //-----------------------------------------------------------------
     let eventService = EventService()
     var items : [Event] = []
+    var selectedEvent : Event?
 
     //Actions
     //-----------------------------------------------------------------
@@ -64,4 +68,17 @@ class EventViewController: UIViewController, UITableViewDelegate {
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let event = items[indexPath.row]
+        selectedEvent = event
+        performSegueWithIdentifier("showEventSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let showEventViewController = segue.destinationViewController as? ShowEventViewController {
+            showEventViewController.event = selectedEvent
+        }
+    }
+    
 }

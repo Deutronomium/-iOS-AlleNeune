@@ -76,5 +76,40 @@ class EventService {
         return response
     }
     
+    func getEventParticipants(eventID : Int) -> [User] {
+        var params : NSDictionary
+        let url = Event.GET_PARTICIPANTS
+        var response : [User] = []
+        
+        params = [
+            Event.ROOT : [
+                Event.EVENT_ID : eventID
+            ]
+        ]
+        
+        ApiPostHandler().apiPost(params, url: url) { (succeeded, postResponse) -> () in
+            if succeeded {
+                if let HTTPResponse = postResponse.response as? NSHTTPURLResponse {
+                    let statusCode = HTTPResponse.statusCode
+                    if statusCode == 200 {
+                        let json = JSON(data: postResponse.data as NSData)
+                        let events: Array<JSON> = json[Event.ROOTS].arrayValue
+                        for user in events {
+                            let id = user[User.ID].intValue
+                            let userName = user[User.USER_NAME].stringValue
+                            let phoneNumber = user[User.PHONE_NUMBER].stringValue
+                            
+                            let getUser : User = User(id: id, userName: userName, phoneNumber: phoneNumber)
+                            response.append(getUser)
+                        }
+                        println(json)
+                    }
+                }
+            }
+        }
+        
+        return response
+    }
+    
     
 }

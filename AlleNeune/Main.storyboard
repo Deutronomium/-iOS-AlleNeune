@@ -173,11 +173,12 @@
                     <connections>
                         <outlet property="eventsTable" destination="o63-Yg-1bG" id="osh-9z-dgO"/>
                         <segue destination="oeu-Gn-fIh" kind="show" identifier="createEventSegue" id="mhI-4i-KJu"/>
+                        <segue destination="uq7-7D-6w1" kind="show" identifier="showEventSegue" id="Dqa-LO-u74"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2IS-do-5wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6706" y="-169"/>
+            <point key="canvasLocation" x="6674" y="-945"/>
         </scene>
         <!--Create Event-->
         <scene sceneID="COQ-YK-LeJ">
@@ -227,7 +228,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juC-xx-h3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7460" y="-169"/>
+            <point key="canvasLocation" x="7393" y="-1404"/>
+        </scene>
+        <!--EventName-->
+        <scene sceneID="CGj-7y-M5l">
+            <objects>
+                <viewController id="uq7-7D-6w1" customClass="ShowEventViewController" customModule="AlleNeune" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xXm-v9-Iz0"/>
+                        <viewControllerLayoutGuide type="bottom" id="UnN-RH-4h0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hRe-75-62G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ibG-Ip-4he">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uq7-7D-6w1" id="mOX-1d-KTc"/>
+                                    <outlet property="delegate" destination="uq7-7D-6w1" id="rBx-HX-YGI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ibG-Ip-4he" secondAttribute="trailing" constant="-16" id="40T-8Z-55e"/>
+                            <constraint firstItem="ibG-Ip-4he" firstAttribute="leading" secondItem="hRe-75-62G" secondAttribute="leadingMargin" constant="-16" id="IZU-yy-U9B"/>
+                            <constraint firstItem="ibG-Ip-4he" firstAttribute="top" secondItem="hRe-75-62G" secondAttribute="topMargin" id="YYl-y9-AWt"/>
+                            <constraint firstItem="UnN-RH-4h0" firstAttribute="top" secondItem="ibG-Ip-4he" secondAttribute="bottom" id="oBY-8c-fU3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="EventName" id="ffh-0C-Gpq"/>
+                    <connections>
+                        <outlet property="showEventTable" destination="ibG-Ip-4he" id="qtm-hT-vsT"/>
+                        <segue destination="tOm-xi-QTM" kind="show" identifier="addDrinkSegue" id="YtH-cE-PKm"/>
+                        <segue destination="mgs-gc-Dz4" kind="show" identifier="addFineSegue" id="7Qc-vi-y6e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ue-5z-JMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7393" y="-641"/>
+        </scene>
+        <!--Add Drink-->
+        <scene sceneID="cdJ-wm-BhX">
+            <objects>
+                <viewController id="tOm-xi-QTM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k7T-vU-PO8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mqp-v6-uRX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qgm-5a-MYt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Drink" id="65b-CW-SyQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Deh-Zk-i8v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8118" y="-1052"/>
+        </scene>
+        <!--Add Fine-->
+        <scene sceneID="50C-1N-Ixl">
+            <objects>
+                <viewController id="mgs-gc-Dz4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bCj-XP-ig6"/>
+                        <viewControllerLayoutGuide type="bottom" id="ced-XG-34j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Th0-9D-GKx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Fine" id="ZYe-j2-UYr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ihK-vR-I47" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8118" y="-372"/>
         </scene>
         <!--Create Drink-->
         <scene sceneID="mRv-3F-Ixa">

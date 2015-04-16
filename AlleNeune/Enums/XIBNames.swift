@@ -19,5 +19,6 @@ enum XIBNames : String {
         FINE_CONTROLLER = "FineViewController",
         EVENT_CELL = "EventTableViewCell",
         DRINK_CELL = "DrinkTableViewCell",
-        FINE_CELL = "FineTableViewCell"
+        FINE_CELL = "FineTableViewCell",
+        SHOW_EVENT_CELL = "ShowEventTableViewCell"
 }

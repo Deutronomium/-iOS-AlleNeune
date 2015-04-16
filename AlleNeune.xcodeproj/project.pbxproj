@@ -23,6 +23,12 @@
 		9908C6621AB02EA5007F8679 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9908C6611AB02EA5007F8679 /* ApiCall.swift */; };
 		9908C6651AB080AC007F8679 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9908C6631AB080AC007F8679 /* EventTableViewCell.swift */; };
 		9908C6661AB080AC007F8679 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9908C6641AB080AC007F8679 /* EventTableViewCell.xib */; };
+		992F71381AC9F45F0002E275 /* ShowEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F71361AC9F45F0002E275 /* ShowEventTableViewCell.swift */; };
+		992F71391AC9F45F0002E275 /* ShowEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 992F71371AC9F45F0002E275 /* ShowEventTableViewCell.xib */; };
+		992F713D1AC9F5010002E275 /* drink_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 992F713A1AC9F5010002E275 /* drink_icon.png */; };
+		992F713E1AC9F5010002E275 /* event_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 992F713B1AC9F5010002E275 /* event_icon.png */; };
+		992F713F1AC9F5010002E275 /* fine_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 992F713C1AC9F5010002E275 /* fine_icon.png */; };
+		992F71411AC9F78B0002E275 /* ShowEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F71401AC9F78B0002E275 /* ShowEventViewController.swift */; };
 		992FD1E31AA7C086000CD5A3 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992FD1E21AA7C086000CD5A3 /* Session.swift */; };
 		992FD21C1AA9A956000CD5A3 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992FD21A1AA9A956000CD5A3 /* SignUpController.swift */; };
 		99411CC51AB2B6220099A6E5 /* CustomCellNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99411CC41AB2B6220099A6E5 /* CustomCellNames.swift */; };
@@ -85,6 +91,12 @@
 		9908C6611AB02EA5007F8679 /* ApiCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
 		9908C6631AB080AC007F8679 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		9908C6641AB080AC007F8679 /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		992F71361AC9F45F0002E275 /* ShowEventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventTableViewCell.swift; sourceTree = "<group>"; };
+		992F71371AC9F45F0002E275 /* ShowEventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowEventTableViewCell.xib; sourceTree = "<group>"; };
+		992F713A1AC9F5010002E275 /* drink_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drink_icon.png; sourceTree = "<group>"; };
+		992F713B1AC9F5010002E275 /* event_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event_icon.png; sourceTree = "<group>"; };
+		992F713C1AC9F5010002E275 /* fine_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fine_icon.png; sourceTree = "<group>"; };
+		992F71401AC9F78B0002E275 /* ShowEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventViewController.swift; sourceTree = "<group>"; };
 		992FD1E21AA7C086000CD5A3 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		992FD21A1AA9A956000CD5A3 /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		99411CC41AB2B6220099A6E5 /* CustomCellNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellNames.swift; sourceTree = "<group>"; };
@@ -202,6 +214,7 @@
 				99495F501ABBFC5D001A4744 /* CreateEventViewController.swift */,
 				99495F601AC1C658001A4744 /* CreateDrinkViewController.swift */,
 				99495FC01AC54192001A4744 /* CreateFineViewController.swift */,
+				992F71401AC9F78B0002E275 /* ShowEventViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -224,6 +237,7 @@
 		99411CC21AB1FF620099A6E5 /* CellLayouts */ = {
 			isa = PBXGroup;
 			children = (
+				992F71371AC9F45F0002E275 /* ShowEventTableViewCell.xib */,
 				99495F5D1ABC37DE001A4744 /* FineTableViewCell.xib */,
 				99495F591ABC2DCA001A4744 /* DrinkTableViewCell.xib */,
 				9908C6641AB080AC007F8679 /* EventTableViewCell.xib */,
@@ -237,6 +251,7 @@
 				99495F5C1ABC37DE001A4744 /* FineTableViewCell.swift */,
 				99495F581ABC2DCA001A4744 /* DrinkTableViewCell.swift */,
 				9908C6631AB080AC007F8679 /* EventTableViewCell.swift */,
+				992F71361AC9F45F0002E275 /* ShowEventTableViewCell.swift */,
 			);
 			name = CellClasses;
 			sourceTree = "<group>";
@@ -291,6 +306,9 @@
 		998546231AA6640100E56612 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				992F713A1AC9F5010002E275 /* drink_icon.png */,
+				992F713B1AC9F5010002E275 /* event_icon.png */,
+				992F713C1AC9F5010002E275 /* fine_icon.png */,
 				998546241AA6640100E56612 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -408,10 +426,14 @@
 				9908C6661AB080AC007F8679 /* EventTableViewCell.xib in Resources */,
 				99411CFB1AB2D4B30099A6E5 /* Main.storyboard in Resources */,
 				998568A21AAF8998002905F2 /* UserHomeController.xib in Resources */,
+				992F713D1AC9F5010002E275 /* drink_icon.png in Resources */,
 				99495F5F1ABC37DE001A4744 /* FineTableViewCell.xib in Resources */,
+				992F713E1AC9F5010002E275 /* event_icon.png in Resources */,
+				992F713F1AC9F5010002E275 /* fine_icon.png in Resources */,
 				998546301AA6640100E56612 /* LaunchScreen.xib in Resources */,
 				998568B51AAF8ABE002905F2 /* Localizable.strings in Resources */,
 				9985462D1AA6640100E56612 /* Images.xcassets in Resources */,
+				992F71391AC9F45F0002E275 /* ShowEventTableViewCell.xib in Resources */,
 				99495F5B1ABC2DCA001A4744 /* DrinkTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +458,7 @@
 				9908C6391AAFA5BF007F8679 /* LoginController.swift in Sources */,
 				9908C65C1AB02DA0007F8679 /* FineService.swift in Sources */,
 				99495F611AC1C658001A4744 /* CreateDrinkViewController.swift in Sources */,
+				992F71411AC9F78B0002E275 /* ShowEventViewController.swift in Sources */,
 				99495FC11AC54192001A4744 /* CreateFineViewController.swift in Sources */,
 				99C3CDE41AA9C2BA00941CD4 /* UIHelper.swift in Sources */,
 				9985688E1AA9FFCE002905F2 /* SessionLogin.swift in Sources */,
@@ -464,6 +487,7 @@
 				549A3016417E6D3852B6ABEA /* UserService.swift in Sources */,
 				99495F5A1ABC2DCA001A4744 /* DrinkTableViewCell.swift in Sources */,
 				998568911AAA185E002905F2 /* PhoneNumberController.swift in Sources */,
+				992F71381AC9F45F0002E275 /* ShowEventTableViewCell.swift in Sources */,
 				99C3CDE21AA9B95D00941CD4 /* Utils.swift in Sources */,
 				99495F5E1ABC37DE001A4744 /* FineTableViewCell.swift in Sources */,
 				9908C6621AB02EA5007F8679 /* ApiCall.swift in Sources */,

@@ -363,5 +363,137 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlleNeune/EventService.swift"
+            timestampString = "450718310.870301"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "getEventParticipants(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlleNeune/ShowEventTableViewCell.swift"
+            timestampString = "450734416.24758"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ShowEventTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlleNeune.ShowEventTableViewCell.userNameLabel.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "AlleNeune"
+                  urlString = "file:///Users/patrickengelkes/Development/workspace-swift/AlleNeune/AlleNeune/ShowEventTableViewCell.swift"
+                  timestampString = "450734416.26755"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlleNeune.ShowEventTableViewCell.userNameLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "AlleNeune"
+                  urlString = "file:///Users/patrickengelkes/Development/workspace-swift/AlleNeune/AlleNeune/ShowEventTableViewCell.swift"
+                  timestampString = "450734416.267802"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlleNeune.ShowEventTableViewCell.userNameLabel.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "AlleNeune"
+                  urlString = "file:///Users/patrickengelkes/Development/workspace-swift/AlleNeune/AlleNeune/ShowEventTableViewCell.swift"
+                  timestampString = "450734416.267932"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlleNeune.ShowEventTableViewCell.init (AlleNeune.ShowEventTableViewCell.Type)(style : C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; AlleNeune.ShowEventTableViewCell"
+                  moduleName = "AlleNeune"
+                  urlString = "file:///Users/patrickengelkes/Development/workspace-swift/AlleNeune/AlleNeune/ShowEventTableViewCell.swift"
+                  timestampString = "450734416.268056"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlleNeune.ShowEventTableViewCell.init (AlleNeune.ShowEventTableViewCell.Type)(frame : C.CGRect) -&gt; AlleNeune.ShowEventTableViewCell"
+                  moduleName = "AlleNeune"
+                  urlString = "file:///Users/patrickengelkes/Development/workspace-swift/AlleNeune/AlleNeune/ShowEventTableViewCell.swift"
+                  timestampString = "450734416.268182"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlleNeune.ShowEventTableViewCell.init (AlleNeune.ShowEventTableViewCell.Type)() -&gt; AlleNeune.ShowEventTableViewCell"
+                  moduleName = "AlleNeune"
+                  urlString = "file:///Users/patrickengelkes/Development/workspace-swift/AlleNeune/AlleNeune/ShowEventTableViewCell.swift"
+                  timestampString = "450734416.268304"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AlleNeune.ShowEventTableViewCell.init (AlleNeune.ShowEventTableViewCell.Type)(coder : ObjectiveC.NSCoder) -&gt; AlleNeune.ShowEventTableViewCell"
+                  moduleName = "AlleNeune"
+                  urlString = "file:///Users/patrickengelkes/Development/workspace-swift/AlleNeune/AlleNeune/ShowEventTableViewCell.swift"
+                  timestampString = "450734416.268421"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
