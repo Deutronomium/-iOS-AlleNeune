@@ -19,7 +19,7 @@ class DrinkViewController: UIViewController, UITableViewDelegate {
     //Actions
     //-----------------------------------------------------------------
     @IBAction func createDrinkAction(sender: AnyObject) {
-        performSegueWithIdentifier("createDrinkSegue", sender: self)
+        performSegueWithIdentifier(SegueNames.CREATE_DRINK.rawValue, sender: self)
     }
     
     //View functions

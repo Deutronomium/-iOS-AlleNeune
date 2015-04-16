@@ -62,6 +62,7 @@
 		99C8D55F1AA7008D00D3EF7D /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D55E1AA7008D00D3EF7D /* SessionService.swift */; };
 		99C8D5611AA700A800D3EF7D /* ApiPostHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D5601AA700A800D3EF7D /* ApiPostHandler.swift */; };
 		99C8D5911AA707A900D3EF7D /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D5901AA707A900D3EF7D /* PostResponse.swift */; };
+		99D3EF701AE00C6700A952F0 /* SegueNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3EF6F1AE00C6700A952F0 /* SegueNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		99C8D55E1AA7008D00D3EF7D /* SessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		99C8D5601AA700A800D3EF7D /* ApiPostHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiPostHandler.swift; sourceTree = "<group>"; };
 		99C8D5901AA707A900D3EF7D /* PostResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
+		99D3EF6F1AE00C6700A952F0 /* SegueNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				998568BA1AAF918F002905F2 /* XIBNames.swift */,
 				9908C6611AB02EA5007F8679 /* ApiCall.swift */,
 				99411CC41AB2B6220099A6E5 /* CustomCellNames.swift */,
+				99D3EF6F1AE00C6700A952F0 /* SegueNames.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				99495F491ABB2FCB001A4744 /* ClubTabBarController.swift in Sources */,
 				998546261AA6640100E56612 /* AppDelegate.swift in Sources */,
 				9908C6651AB080AC007F8679 /* EventTableViewCell.swift in Sources */,
+				99D3EF701AE00C6700A952F0 /* SegueNames.swift in Sources */,
 				992FD1E31AA7C086000CD5A3 /* Session.swift in Sources */,
 				549A3A4833195ED9C735B733 /* Club.swift in Sources */,
 				99495F4F1ABBECCF001A4744 /* FineViewController.swift in Sources */,

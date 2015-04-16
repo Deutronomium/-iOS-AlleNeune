@@ -23,7 +23,7 @@ class EventViewController: UIViewController, UITableViewDelegate {
     //Actions
     //-----------------------------------------------------------------
     @IBAction func createEventAction(sender: AnyObject) {
-        performSegueWithIdentifier("createEventSegue", sender: self)
+        performSegueWithIdentifier(SegueNames.CREATE_EVENT.rawValue, sender: self)
     }
     
     //View functions
@@ -72,7 +72,7 @@ class EventViewController: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let event = items[indexPath.row]
         selectedEvent = event
-        performSegueWithIdentifier("showEventSegue", sender: self)
+        performSegueWithIdentifier(SegueNames.SHOW_EVENT.rawValue, sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

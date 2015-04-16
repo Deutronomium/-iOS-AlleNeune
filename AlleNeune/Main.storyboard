@@ -263,7 +263,7 @@
                     <connections>
                         <outlet property="showEventTable" destination="ibG-Ip-4he" id="qtm-hT-vsT"/>
                         <segue destination="tOm-xi-QTM" kind="show" identifier="addDrinkSegue" id="YtH-cE-PKm"/>
-                        <segue destination="mgs-gc-Dz4" kind="show" identifier="addFineSegue" id="7Qc-vi-y6e"/>
+                        <segue destination="mgs-gc-Dz4" kind="show" identifier="addFineToUserSegue" id="7Qc-vi-y6e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ue-5z-JMt" userLabel="First Responder" sceneMemberID="firstResponder"/>

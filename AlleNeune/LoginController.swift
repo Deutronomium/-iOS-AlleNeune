@@ -28,12 +28,12 @@ class LoginController: MyViewController {
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
         let userService = UserService()
         var loginResponse = login()
-        if identifier == "clubHomeSegue" {
+        if identifier == SegueNames.CLUB_HOME.rawValue {
             if loginResponse {
                 userService.userHasClub(currentUser.userName!)
                 return true
             }
-        } else if identifier == "signUpSegue" {
+        } else if identifier == SegueNames.SIGN_UP.rawValue {
             return true
         }
         

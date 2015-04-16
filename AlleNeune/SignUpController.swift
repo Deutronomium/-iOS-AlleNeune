@@ -38,7 +38,7 @@ class SignUpController: MyViewController {
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
-        if identifier == "phoneNumberSegue" {
+        if identifier == SegueNames.PHONE_NUMBER.rawValue {
             if continueToPhoneNumber() {
                 return true
             }

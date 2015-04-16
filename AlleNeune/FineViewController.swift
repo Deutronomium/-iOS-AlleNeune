@@ -19,7 +19,7 @@ class FineViewController: UIViewController {
     //Actions
     //-----------------------------------------------------------------
     @IBAction func createFineAction(sender: AnyObject) {
-        performSegueWithIdentifier("createFineSegue", sender: self)
+        performSegueWithIdentifier(SegueNames.CREATE_FINE.rawValue, sender: self)
     }
     
     //View Functions
