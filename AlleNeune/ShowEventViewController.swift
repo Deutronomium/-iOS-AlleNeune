@@ -9,7 +9,8 @@
 import UIKit
 
 class ShowEventViewController: UIViewController, UITableViewDelegate {
-
+    //Outlets
+    //-----------------------------------------------------------------
     @IBOutlet weak var showEventTable: UITableView!
     
     //Variables and Constants
@@ -17,14 +18,13 @@ class ShowEventViewController: UIViewController, UITableViewDelegate {
     var users : [User] = []
     var eventService = EventService()
     var event : Event?
+    var selectedUser : User?
     
     //View functions
     //-----------------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(event?.id);
-        //TODO: Change to eventID after testing...
-        users = eventService.getEventParticipants(1);
+        users = eventService.getEventParticipants(event!.id!);
         
         self.navigationItem.title = event?.name
         showEventTable.registerNib(UINib(nibName: XIBNames.SHOW_EVENT_CELL.rawValue, bundle: nil), forCellReuseIdentifier: CustomCellNames.SHOW_EVENT_CELL.rawValue)
@@ -49,11 +49,24 @@ class ShowEventViewController: UIViewController, UITableViewDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier(CustomCellNames.SHOW_EVENT_CELL.rawValue, forIndexPath: indexPath) as ShowEventTableViewCell
         
         //showEventViewCell
-        let user = users[indexPath.row]
-        println("Setting user for cell")
-        cell.user = user
-        cell.userNameLabel.text = user.userName
+        selectedUser = users[indexPath.row]
+        
+        cell.userNameLabel.text = selectedUser?.userName
+        cell.addDrinkAction = {
+            self.performSegueWithIdentifier(SegueNames.ADD_DRINK_TO_USER.rawValue, sender: self)
+        }
+        cell.addFineAction = {
+            self.performSegueWithIdentifier(SegueNames.ADD_FINE_TO_USER.rawValue, sender: self)
+        }
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let addDrinkToUserViewController = segue.destinationViewController as? AddDrinkToUserViewController {
+            addDrinkToUserViewController.user = selectedUser
+        }
+    }
+    
+
 }

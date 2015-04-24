@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="akw-yP-OXB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="akw-yP-OXB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -262,7 +262,7 @@
                     <navigationItem key="navigationItem" title="EventName" id="ffh-0C-Gpq"/>
                     <connections>
                         <outlet property="showEventTable" destination="ibG-Ip-4he" id="qtm-hT-vsT"/>
-                        <segue destination="tOm-xi-QTM" kind="show" identifier="addDrinkSegue" id="YtH-cE-PKm"/>
+                        <segue destination="tOm-xi-QTM" kind="show" identifier="addDrinkToUserSegue" id="YtH-cE-PKm"/>
                         <segue destination="mgs-gc-Dz4" kind="show" identifier="addFineToUserSegue" id="7Qc-vi-y6e"/>
                     </connections>
                 </viewController>
@@ -270,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="7393" y="-641"/>
         </scene>
-        <!--Add Drink-->
+        <!--Add Drink To User-->
         <scene sceneID="cdJ-wm-BhX">
             <objects>
-                <viewController id="tOm-xi-QTM" sceneMemberID="viewController">
+                <viewController id="tOm-xi-QTM" customClass="AddDrinkToUserViewController" customModule="AlleNeune" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k7T-vU-PO8"/>
                         <viewControllerLayoutGuide type="bottom" id="Mqp-v6-uRX"/>
@@ -281,15 +281,34 @@
                     <view key="view" contentMode="scaleToFill" id="Qgm-5a-MYt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AyX-Ib-O7h">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tOm-xi-QTM" id="rur-Mz-oHa"/>
+                                    <outlet property="delegate" destination="tOm-xi-QTM" id="kHY-OL-JW0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AyX-Ib-O7h" firstAttribute="top" secondItem="Qgm-5a-MYt" secondAttribute="topMargin" id="0nq-Qa-pKM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AyX-Ib-O7h" secondAttribute="trailing" constant="-16" id="JMf-OC-clM"/>
+                            <constraint firstItem="AyX-Ib-O7h" firstAttribute="leading" secondItem="Qgm-5a-MYt" secondAttribute="leadingMargin" constant="-16" id="L9F-wk-2o6"/>
+                            <constraint firstItem="Mqp-v6-uRX" firstAttribute="top" secondItem="AyX-Ib-O7h" secondAttribute="bottom" id="R0P-KN-Fzu"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Drink" id="65b-CW-SyQ"/>
+                    <navigationItem key="navigationItem" title="Add Drink To User" id="65b-CW-SyQ"/>
+                    <connections>
+                        <outlet property="table" destination="AyX-Ib-O7h" id="byp-55-RIf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Deh-Zk-i8v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8118" y="-1052"/>
         </scene>
-        <!--Add Fine-->
+        <!--Add Fine To User-->
         <scene sceneID="50C-1N-Ixl">
             <objects>
                 <viewController id="mgs-gc-Dz4" sceneMemberID="viewController">
@@ -302,7 +321,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Fine" id="ZYe-j2-UYr"/>
+                    <navigationItem key="navigationItem" title="Add Fine To User" id="ZYe-j2-UYr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihK-vR-I47" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -63,6 +63,9 @@
 		99C8D5611AA700A800D3EF7D /* ApiPostHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D5601AA700A800D3EF7D /* ApiPostHandler.swift */; };
 		99C8D5911AA707A900D3EF7D /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8D5901AA707A900D3EF7D /* PostResponse.swift */; };
 		99D3EF701AE00C6700A952F0 /* SegueNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3EF6F1AE00C6700A952F0 /* SegueNames.swift */; };
+		99D3EF731AE00F4D00A952F0 /* AddDrinkToUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3EF711AE00F4D00A952F0 /* AddDrinkToUserCell.swift */; };
+		99D3EF741AE00F4D00A952F0 /* AddDrinkToUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99D3EF721AE00F4D00A952F0 /* AddDrinkToUserCell.xib */; };
+		99D3EF761AE020FE00A952F0 /* AddDrinkToUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D3EF751AE020FE00A952F0 /* AddDrinkToUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +142,9 @@
 		99C8D5601AA700A800D3EF7D /* ApiPostHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiPostHandler.swift; sourceTree = "<group>"; };
 		99C8D5901AA707A900D3EF7D /* PostResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		99D3EF6F1AE00C6700A952F0 /* SegueNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueNames.swift; sourceTree = "<group>"; };
+		99D3EF711AE00F4D00A952F0 /* AddDrinkToUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDrinkToUserCell.swift; sourceTree = "<group>"; };
+		99D3EF721AE00F4D00A952F0 /* AddDrinkToUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddDrinkToUserCell.xib; sourceTree = "<group>"; };
+		99D3EF751AE020FE00A952F0 /* AddDrinkToUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDrinkToUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +224,7 @@
 				99495F601AC1C658001A4744 /* CreateDrinkViewController.swift */,
 				99495FC01AC54192001A4744 /* CreateFineViewController.swift */,
 				992F71401AC9F78B0002E275 /* ShowEventViewController.swift */,
+				99D3EF751AE020FE00A952F0 /* AddDrinkToUserViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -240,6 +247,7 @@
 		99411CC21AB1FF620099A6E5 /* CellLayouts */ = {
 			isa = PBXGroup;
 			children = (
+				99D3EF721AE00F4D00A952F0 /* AddDrinkToUserCell.xib */,
 				992F71371AC9F45F0002E275 /* ShowEventTableViewCell.xib */,
 				99495F5D1ABC37DE001A4744 /* FineTableViewCell.xib */,
 				99495F591ABC2DCA001A4744 /* DrinkTableViewCell.xib */,
@@ -255,6 +263,7 @@
 				99495F581ABC2DCA001A4744 /* DrinkTableViewCell.swift */,
 				9908C6631AB080AC007F8679 /* EventTableViewCell.swift */,
 				992F71361AC9F45F0002E275 /* ShowEventTableViewCell.swift */,
+				99D3EF711AE00F4D00A952F0 /* AddDrinkToUserCell.swift */,
 			);
 			name = CellClasses;
 			sourceTree = "<group>";
@@ -434,6 +443,7 @@
 				992F713E1AC9F5010002E275 /* event_icon.png in Resources */,
 				992F713F1AC9F5010002E275 /* fine_icon.png in Resources */,
 				998546301AA6640100E56612 /* LaunchScreen.xib in Resources */,
+				99D3EF741AE00F4D00A952F0 /* AddDrinkToUserCell.xib in Resources */,
 				998568B51AAF8ABE002905F2 /* Localizable.strings in Resources */,
 				9985462D1AA6640100E56612 /* Images.xcassets in Resources */,
 				992F71391AC9F45F0002E275 /* ShowEventTableViewCell.xib in Resources */,
@@ -456,7 +466,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				998568BB1AAF918F002905F2 /* XIBNames.swift in Sources */,
+				99D3EF761AE020FE00A952F0 /* AddDrinkToUserViewController.swift in Sources */,
 				998546461AA6666500E56612 /* SwiftyJSON.swift in Sources */,
+				99D3EF731AE00F4D00A952F0 /* AddDrinkToUserCell.swift in Sources */,
 				998568961AAF74E1002905F2 /* MyTextField.swift in Sources */,
 				9908C6391AAFA5BF007F8679 /* LoginController.swift in Sources */,
 				9908C65C1AB02DA0007F8679 /* FineService.swift in Sources */,

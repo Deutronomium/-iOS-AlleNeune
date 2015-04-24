@@ -11,15 +11,22 @@ import UIKit
 class ShowEventTableViewCell: UITableViewCell {
 
     var user : User?
+    var addDrinkAction:() -> () = {}
+    var addFineAction:() -> () = {}
+    
     @IBOutlet weak var userNameLabel: UILabel!
     
     
     @IBAction func addFineAction(sender: AnyObject) {
-        println("FineButton clicked!")
+        if addFineAction != nil {
+            addFineAction()
+        }
     }
     
     @IBAction func addDrinkAction(sender: AnyObject) {
-        println("DrinkButton clicked!")
+        if addDrinkAction != nil {
+            addDrinkAction()
+        }
     }
     
     override func awakeFromNib() {
@@ -28,7 +35,5 @@ class ShowEventTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 }

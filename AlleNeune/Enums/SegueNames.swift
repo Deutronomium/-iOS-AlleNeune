@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SegueNames :String {
+enum SegueNames : String {
     case ADD_DRINK_TO_USER = "addDrinkToUserSegue",
         ADD_FINE_TO_USER = "addFineToUserSegue",
         SHOW_EVENT = "showEventSegue",

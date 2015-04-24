@@ -12,5 +12,6 @@ enum CustomCellNames : String {
     case EVENT_CELL = "eventCell",
         DRINK_CELL = "drinkCell",
         FINE_CELL = "fineCell",
-        SHOW_EVENT_CELL = "showEventViewCell"
+        SHOW_EVENT_CELL = "showEventViewCell",
+        ADD_DRINK_TO_USER_CELL = "addDrinkToUserCell"
 }
